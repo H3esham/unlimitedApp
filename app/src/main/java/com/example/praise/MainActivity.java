@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private Button resetBtn;
     private int counter;
     /**
-     * test doc
+     * afahsfagtest doc
      */
     private View.OnClickListener clickListener = new View.OnClickListener() {
         @Override
