@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/download"
+    tools:context="com.example.praise.MainActivity">
+
+    <TextView
+        android:id="@+id/p0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="0"
+        android:textColor="#000000"
+        android:textSize="120sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="171dp"
+        tools:layout_editor_absoluteY="354dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/praise"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/minusBtn"
+        android:layout_width="87dp"
+        android:layout_height="108dp"
+        android:text="-"
+        android:textSize="50sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="601dp" />
+
+    <Button
+        android:id="@+id/resetBtn"
+        android:layout_width="186dp"
+        android:layout_height="104dp"
+        android:text="reset"
+        android:textSize="30sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="112dp"
+        tools:layout_editor_absoluteY="601dp" />
+
+    <Button
+        android:id="@+id/plusBtn"
+        android:layout_width="76dp"
+        android:layout_height="104dp"
+        android:shadowColor="@color/purple_500"
+        android:text="+"
+        android:textSize="50sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="328dp"
+        tools:layout_editor_absoluteY="601dp" />
+
+    <TextView
+        android:id="@+id/praise"
+        android:layout_width="726dp"
+        android:layout_height="349dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="36dp"
+
+        android:text="Ram     adan"
+        android:textColor="@color/black"
+        android:textSize="11mm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/Pro"
+        android:layout_width="662dp"
+        android:layout_height="255dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="116dp"
+
+        android:text="kar              eem"
+        android:textColor="@color/black"
+        android:textSize="9mm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/p20"
+        android:layout_width="531dp"
+        android:layout_height="244dp"
+        android:layout_centerHorizontal="true"
+        android:text="sphan allah"
+        android:textColor="#FFFAFA"
+        android:textSize="8mm"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="212dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

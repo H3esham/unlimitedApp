@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#ff000000</color>//this color has background btn
+    <color name="purple_700">#FF018786</color>
+    <color name="teal_200">#192524</color>
+    <color name="teal_700">#53CC08</color>
+    <color name="black">#F9FFF6</color>//this color has word
+    <Color name="praise">#ff000000</Color>
+
+</resources>
