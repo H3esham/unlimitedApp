@@ -13,9 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private Button plusBtn;
     private Button resetBtn;
     private int counter;
-    /**
-     * afahsfagtest doc
-     */
+
     private View.OnClickListener clickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
