@@ -12,36 +12,14 @@
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/p2"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="16dp"
-            android:layout_weight="1"
-            android:text="allah"
-            android:textColor="#FFFAFA"
-            android:textSize="8mm" />
-
-        <TextView
-            android:id="@+id/p20"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="16dp"
-            android:layout_weight="1"
-            android:text="sphan"
-            android:textAlignment="viewEnd"
-            android:textColor="#FFFAFA"
-            android:textSize="8mm" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout4"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/praise"
@@ -50,7 +28,7 @@
             android:layout_weight="1"
             android:text="Ram "
             android:textColor="@color/black"
-            android:textSize="11mm" />
+            android:textSize="60sp" />
 
         <TextView
             android:id="@+id/praise3"
@@ -60,58 +38,121 @@
             android:text="adan"
             android:textAlignment="viewEnd"
             android:textColor="@color/black"
-            android:textSize="11mm" />
+            android:textSize="60sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <TextView
+            android:id="@+id/p20"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:text="Kar"
+            android:textAlignment="viewStart"
+            android:textColor="#FFFAFA"
+            android:textSize="48sp" />
+
+        <TextView
+            android:id="@+id/p2"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:text="eem"
+            android:textAlignment="viewEnd"
+            android:textColor="#FFFAFA"
+            android:textSize="48sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/p0"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/p5"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:text="sphan allah"
+            android:textAlignment="center"
+            android:textColor="#FFFAFA"
+            android:textSize="48sp" />
+
     </LinearLayout>
 
     <TextView
         android:id="@+id/p0"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:text="0"
         android:textAlignment="center"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="120sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
         tools:ignore="MissingConstraints" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="113dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints">
 
         <Button
             android:id="@+id/minusBtn"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_margin="20dp"
             android:layout_weight="1"
             android:text="-"
-            android:textSize="50sp"
-             />
+            android:textSize="50sp" />
 
         <Button
             android:id="@+id/resetBtn"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_margin="5dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
             android:layout_weight="1"
             android:text="reset"
-            android:textSize="24sp"
-             />
+            android:textSize="24sp" />
 
         <Button
             android:id="@+id/plusBtn"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_margin="20dp"
             android:layout_weight="1"
-            android:shadowColor="@color/purple_500"
             android:text="+"
-            android:textSize="50sp"
-             />
+            android:textSize="50sp" />
 
     </LinearLayout>
 
