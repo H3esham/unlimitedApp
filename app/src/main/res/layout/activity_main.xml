@@ -8,99 +8,152 @@
     android:background="@drawable/download"
     tools:context="com.example.praise.MainActivity">
 
-    <TextView
-        android:id="@+id/p0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="0"
-        android:textColor="#000000"
-        android:textSize="120sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="171dp"
-        tools:layout_editor_absoluteY="354dp" />
-
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/praise"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:orientation="horizontal"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/praise"
+            android:layout_width="0dp"
+            android:layout_height="119dp"
+            android:layout_weight="1"
+            android:text="Ram "
+            android:textColor="@color/black"
+            android:textSize="60sp" />
+
+        <TextView
+            android:id="@+id/praise3"
+            android:layout_width="0dp"
+            android:layout_height="119dp"
+            android:layout_weight="1"
+            android:text="adan"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/black"
+            android:textSize="60sp" />
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/minusBtn"
-        android:layout_width="87dp"
-        android:layout_height="108dp"
-        android:text="-"
-        android:textSize="50sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="601dp" />
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
-    <Button
-        android:id="@+id/resetBtn"
-        android:layout_width="186dp"
-        android:layout_height="104dp"
-        android:text="reset"
-        android:textSize="30sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="112dp"
-        tools:layout_editor_absoluteY="601dp" />
+        <TextView
+            android:id="@+id/p20"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:text="Kar"
+            android:textAlignment="viewStart"
+            android:textColor="#FFFAFA"
+            android:textSize="48sp" />
 
-    <Button
-        android:id="@+id/plusBtn"
-        android:layout_width="76dp"
-        android:layout_height="104dp"
-        android:shadowColor="@color/purple_500"
-        android:text="+"
-        android:textSize="50sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="328dp"
-        tools:layout_editor_absoluteY="601dp" />
+        <TextView
+            android:id="@+id/p2"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:text="eem"
+            android:textAlignment="viewEnd"
+            android:textColor="#FFFAFA"
+            android:textSize="48sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/p0"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/p5"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:text="sphan allah"
+            android:textAlignment="center"
+            android:textColor="#FFFAFA"
+            android:textSize="48sp" />
+
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/praise"
-        android:layout_width="726dp"
-        android:layout_height="349dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="36dp"
-
-        android:text="Ram     adan"
-        android:textColor="@color/black"
-        android:textSize="11mm"
+        android:id="@+id/p0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="120sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/Pro"
-        android:layout_width="662dp"
-        android:layout_height="255dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="116dp"
-
-        android:text="kar              eem"
-        android:textColor="@color/black"
-        android:textSize="9mm"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints">
 
-    <TextView
-        android:id="@+id/p20"
-        android:layout_width="531dp"
-        android:layout_height="244dp"
-        android:layout_centerHorizontal="true"
-        android:text="sphan allah"
-        android:textColor="#FFFAFA"
-        android:textSize="8mm"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="212dp" />
+        <Button
+            android:id="@+id/minusBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="-"
+            android:textSize="50sp" />
 
+        <Button
+            android:id="@+id/resetBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_weight="1"
+            android:text="reset"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/plusBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="+"
+            android:textSize="50sp" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

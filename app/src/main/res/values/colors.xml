@@ -6,6 +6,6 @@
     <color name="teal_200">#192524</color>
     <color name="teal_700">#53CC08</color>
     <color name="black">#F9FFF6</color>//this color has word
-    <Color name="praise">#ff000000</Color>
+    <color name="praise">#ff000000</color>
 
 </resources>

@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        praise=(TextView) findViewById(R.id.praise);
+        praise=(TextView) findViewById(R.id.p0);
         minusBtn=(Button) findViewById(R.id.minusBtn);
         minusBtn.setOnClickListener(clickListener);
         plusBtn=(Button) findViewById(R.id.plusBtn);
