@@ -1,4 +1,4 @@
-package com.example.praise;
+package com.example.praise.tools.praise;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.praise.R;
 
 public class MainActivity extends AppCompatActivity {
     private TextView praise;
@@ -17,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private View.OnClickListener clickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            switch (view.getId()){
+            switch (view.getId()) {
                 case R.id.minusBtn:
                     minusCounter();
                     break;
@@ -30,32 +32,37 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     };
+
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        praise=(TextView) findViewById(R.id.p0);
-        minusBtn=(Button) findViewById(R.id.minusBtn);
+        setContentView(R.layout.tools_praise_main_activity);
+        praise = (TextView) findViewById(R.id.p0);
+        minusBtn = (Button) findViewById(R.id.minusBtn);
         minusBtn.setOnClickListener(clickListener);
-        plusBtn=(Button) findViewById(R.id.plusBtn);
+        plusBtn = (Button) findViewById(R.id.plusBtn);
         plusBtn.setOnClickListener(clickListener);
-        resetBtn=(Button) findViewById(R.id.resetBtn);
+        resetBtn = (Button) findViewById(R.id.resetBtn);
         resetBtn.setOnClickListener(clickListener);
 
-       initCounter();
+        initCounter();
 
-        }
-        private void initCounter(){
-            counter=0;
-            praise.setText(counter+"");
     }
-    private void plusCounter(){
-        counter++;
-        praise.setText(counter+"");
 
-    } private void minusCounter(){
+    private void initCounter() {
+        counter = 0;
+        praise.setText(counter + "");
+    }
+
+    private void plusCounter() {
+        counter++;
+        praise.setText(counter + "");
+
+    }
+
+    private void minusCounter() {
         counter--;
-        praise.setText(counter+"");
+        praise.setText(counter + "");
     }
 
 }
