@@ -27,6 +27,10 @@ public class HomePageActivity extends AppCompatActivity {
                 intent = new Intent(this, com.example.praise.tools.numberConvert.MainActivity.class);
                startActivity(intent);
                break;
+           case "currecyConvert":
+                intent = new Intent(this, com.example.praise.tools.currecyConvert.MainActivity.class);
+               startActivity(intent);
+               break;
         }
     }
 }
