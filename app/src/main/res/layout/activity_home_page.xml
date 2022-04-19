@@ -42,6 +42,15 @@
             android:tag="currencyConvert"
             android:text="@string/go_to_currency_convert"
             tools:ignore="UsingOnClickInXml" />
+        <Button
+            android:id="@+id/tool_qibla"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:onClick="goToPage"
+            android:tag="qibla"
+            android:text="@string/go_to_qibla"
+            tools:ignore="UsingOnClickInXml" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

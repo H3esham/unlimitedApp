@@ -31,6 +31,10 @@ public class HomePageActivity extends AppCompatActivity {
                 intent = new Intent(this, com.example.praise.tools.currencyConvert.MainActivity.class);
                startActivity(intent);
                break;
+           case "qibla":
+                intent = new Intent(this, com.example.praise.tools.qibla.MainActivity.class);
+               startActivity(intent);
+               break;
         }
     }
 }

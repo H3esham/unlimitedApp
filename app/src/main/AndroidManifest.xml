@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Praise">
         <activity
-            android:name=".tools.currencyConvert.MainActivity"
+            android:name=".tools.qibla.MainActivity"
             android:exported="false" />
         <activity
             android:name=".HomePageActivity"
@@ -29,6 +29,14 @@
             android:name=".tools.praise.MainActivity"
             android:exported="false"
             android:parentActivityName=".HomePageActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".tools.praise.MainActivity" />
+        </activity>
+        <activity
+            android:name=".tools.currencyConvert.MainActivity"
+            android:exported="false"
+            android:value=".tools.praise.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".tools.praise.MainActivity" />
