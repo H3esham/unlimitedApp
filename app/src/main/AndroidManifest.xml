@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Praise">
         <activity
+            android:name=".tools.qibla.MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".HomePageActivity"
             android:exported="true">
             <intent-filter>
@@ -18,16 +21,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".tools.numberConvert.MainActivity"
             android:exported="false"
-            android:parentActivityName=".HomePageActivity"
-        />
+            android:parentActivityName=".HomePageActivity" />
         <activity
             android:name=".tools.praise.MainActivity"
             android:exported="false"
             android:parentActivityName=".HomePageActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".tools.praise.MainActivity" />
+        </activity>
+        <activity
+            android:name=".tools.currencyConvert.MainActivity"
+            android:exported="false"
+            android:value=".tools.praise.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".tools.praise.MainActivity" />
