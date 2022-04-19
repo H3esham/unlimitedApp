@@ -9,21 +9,29 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="16dp">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/tool_praise"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="16dp"
             android:onClick="goToPage"
-            android:text="Button" />
+            android:tag="praise"
+            android:text="@string/go_to_praise"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/tool_numberConvert"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:onClick="goToPage"
+            android:tag="numberConvert"
+            android:text="@string/go_to_numberconvert"
+            tools:ignore="UsingOnClickInXml" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

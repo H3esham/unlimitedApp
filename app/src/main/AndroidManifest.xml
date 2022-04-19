@@ -11,17 +11,23 @@
         android:theme="@style/Theme.Praise">
         <activity
             android:name=".HomePageActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+
+        <activity
+            android:name=".tools.numberConvert.MainActivity"
+            android:exported="false"
+            android:parentActivityName=".HomePageActivity"
+        />
         <activity
             android:name=".tools.praise.MainActivity"
-            android:parentActivityName=".HomePageActivity"
-            android:exported="true">
+            android:exported="false"
+            android:parentActivityName=".HomePageActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".tools.praise.MainActivity" />

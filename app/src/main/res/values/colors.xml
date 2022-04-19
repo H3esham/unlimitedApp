@@ -7,5 +7,5 @@
     <color name="teal_700">#53CC08</color>
     <color name="black">#F9FFF6</color>//this color has word
     <color name="praise">#ff000000</color>
-
+    <color name="white">#FFFFFFFF</color>
 </resources>

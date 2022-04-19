@@ -6,8 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.praise.tools.praise.MainActivity;
-
 public class HomePageActivity extends AppCompatActivity {
 
     @Override
@@ -17,8 +15,18 @@ public class HomePageActivity extends AppCompatActivity {
 
     }
 
-    public void goToPage(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+    public void goToPage(View view){
+        Intent intent;
+        String toolName = view.getTag().toString();
+        switch (toolName){
+            case "praise":
+                intent = new Intent(this, com.example.praise.tools.praise.MainActivity.class);
+                startActivity(intent);
+                break;
+           case "numberConvert":
+                intent = new Intent(this, com.example.praise.tools.numberConvert.MainActivity.class);
+               startActivity(intent);
+               break;
+        }
     }
 }
