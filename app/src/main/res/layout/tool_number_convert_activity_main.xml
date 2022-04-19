@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:background="@drawable/background_design"
+    tools:context=".tools.numberConvert.MainActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="Number Coverter"
+        android:textColor="@color/white"
+        android:textAllCaps="true"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/icon"
+                android:contentDescription="app logo"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"/>
+            <EditText
+                android:id="@+id/etvDecimal"
+                android:inputType="number"
+                android:digits="0123456789"
+                android:maxLength="10"
+                android:background="@drawable/foucsview_design"
+                android:drawableLeft="@drawable/decmial_left"
+                style="@style/myEditTextStyle" />
+            <EditText
+                android:id="@+id/etvBinary"
+                style="@style/myEditTextStyle"
+                android:digits=""
+                android:background="@drawable/view_design"
+                android:drawableLeft="@drawable/binary_leftdrawable"/>
+            <EditText
+                android:id="@+id/etvOctal"
+                style="@style/myEditTextStyle"
+                android:digits=""
+                android:background="@drawable/view_design"
+                android:drawableLeft="@drawable/oct_view"
+                />
+            <EditText
+                android:id="@+id/etvHexa"
+                style="@style/myEditTextStyle"
+                android:digits=""
+                android:background="@drawable/view_design"
+                android:drawableLeft="@drawable/hex_view"/>
+            <Button
+                android:id="@+id/btnClear"
+                android:text="Clear"
+                style="@style/button"
+                android:background="@drawable/button_design"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
