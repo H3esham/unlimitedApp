@@ -1,4 +1,4 @@
-package com.example.praise.tools.currecyConvert;
+package com.example.praise.tools.currencyConvert;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,8 +10,6 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import java.lang.reflect.Array;
-
 import com.example.praise.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tools_currecy_convert_activity_main);
+        setContentView(R.layout.tools_currency_convert_activity_main);
         ed1=findViewById(R.id.txtamount);
         sp1=findViewById(R.id.spfrom);
         sp2=findViewById(R.id.spto);
