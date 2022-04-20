@@ -23,7 +23,7 @@ public class ToolCategoryAdapter  extends RecyclerView.Adapter<ToolCategoryAdapt
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.category_list_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.tool_list_item, parent, false);
         return new ViewHolder(view);
     }
 
