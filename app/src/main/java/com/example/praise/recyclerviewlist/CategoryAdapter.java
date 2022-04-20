@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.praise.R;
@@ -28,6 +29,13 @@ public class CategoryAdapter  extends RecyclerView.Adapter<CategoryAdapter.ViewH
         Category category = categories[position];
         holder.name.setText(category.getName());
         holder.description.setText(category.getDescription());
+        holder.image.setImageResource(category.getImage());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(view.getContext(),"click on item: "+category.getName(), Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     @Override
@@ -39,7 +47,6 @@ public class CategoryAdapter  extends RecyclerView.Adapter<CategoryAdapter.ViewH
         public TextView name;
         public TextView description;
         public ImageView image;
-
         public ViewHolder(View itemView) {
             super(itemView);
             name = (TextView) itemView.findViewById(R.id.category_name);

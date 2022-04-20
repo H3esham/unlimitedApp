@@ -19,10 +19,12 @@ public class HomePageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home_page);
 
         Category[] categories = new Category[]{
-                new Category("Praise","Praise is a tool to convert Arabic numerals to English numerals" ,R.drawable.background_design),
-                new Category("Number Convert","Praise is a tool to convert Arabic numerals to English numerals", R.drawable.background_design),
-                new Category("Currency Convert", "Praise is a tool to convert Arabic numerals to English numerals",R.drawable.background_design),
-                new Category("Qibla","Praise is a tool to convert Arabic numerals to English numerals", R.drawable.background_design)
+                new Category("اسلامي","هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها." ,R.drawable.background_design),
+                new Category("رياضة","هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.", R.drawable.background_design),
+                new Category("تحويلات", "هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.",R.drawable.background_design),
+                new Category("متنوع","هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.", R.drawable.background_design),
+                new Category("انترنت","هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.", R.drawable.background_design),
+                new Category("اي حاجه علشان العرض :)","هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.", R.drawable.background_design)
         };
 
 
@@ -34,26 +36,4 @@ public class HomePageActivity extends AppCompatActivity {
 
     }
 
-    public void goToPage(View view){
-        Intent intent;
-        String toolName = view.getTag().toString();
-        switch (toolName){
-            case "praise":
-                intent = new Intent(this, com.example.praise.tools.praise.MainActivity.class);
-                startActivity(intent);
-                break;
-           case "numberConvert":
-                intent = new Intent(this, com.example.praise.tools.numberConvert.MainActivity.class);
-               startActivity(intent);
-               break;
-           case "currencyConvert":
-                intent = new Intent(this, com.example.praise.tools.currencyConvert.MainActivity.class);
-               startActivity(intent);
-               break;
-           case "qibla":
-                intent = new Intent(this, com.example.praise.tools.qibla.MainActivity.class);
-               startActivity(intent);
-               break;
-        }
-    }
 }
