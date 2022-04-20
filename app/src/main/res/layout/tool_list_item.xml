@@ -3,8 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
-    android:layout_margin="10dp">
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@color/white"
+    android:backgroundTint="@color/purple_700">
 
     <ImageView
         android:id="@+id/category_image"
@@ -42,4 +44,5 @@
         app:layout_constraintEnd_toEndOf="@+id/category_name"
         app:layout_constraintStart_toStartOf="@+id/category_name"
         app:layout_constraintTop_toBottomOf="@+id/category_name" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
