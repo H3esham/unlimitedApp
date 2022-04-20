@@ -1,37 +1,52 @@
 package com.example.praise.models;
 
-public class Category {
+public class Category extends BaseItem {
 
-    private String name;
-    private String description;
-    private int image;
+    private Tool[] tools;
 
-    public Category(String name, String description, int image) {
-        this.name = name;
-        this.description = description;
-        this.image = image;
-    }
-    public String getName() {
-        return name;
+    public Category(String uniqueId,String name, String description, int image, Tool[] tools) {
+        super(uniqueId, name, description, image);
+        this.tools = tools;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Tool[] getTools() {
+        return tools;
     }
 
-    public String getDescription() {
-        return description;
+    public void setTools(Tool[] tools) {
+        this.tools = tools;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void addTool(Tool tool) {
+        if (tools == null) {
+            tools = new Tool[1];
+            tools[0] = tool;
+        } else {
+            Tool[] tempTools = new Tool[tools.length + 1];
+            for (int i = 0; i < tools.length; i++) {
+                tempTools[i] = tools[i];
+            }
+            tempTools[tempTools.length - 1] = tool;
+            tools = tempTools;
+        }
     }
 
-    public int getImage() {
-        return image;
+    public void removeTool(Tool tool) {
+        if (tools != null) {
+            for (int i = 0; i < tools.length; i++) {
+                if (tools[i].getUniqueId().equals(tool.getUniqueId())) {
+                    Tool[] tempTools = new Tool[tools.length - 1];
+                    for (int j = 0; j < i; j++) {
+                        tempTools[j] = tools[j];
+                    }
+                    for (int j = i; j < tempTools.length; j++) {
+                        tempTools[j] = tools[j + 1];
+                    }
+                    tools = tempTools;
+                    return;
+                }
+            }
+        }
     }
 
-    public void setImage(int image) {
-        this.image = image;
-    }
 }

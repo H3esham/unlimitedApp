@@ -1,5 +1,6 @@
 package com.example.praise.recyclerviewlist;
 
+
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,15 +10,15 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.praise.R;
-import com.example.praise.SingleCategoryActivity;
-import com.example.praise.models.Category;
+import com.example.praise.models.Tool;
 
-public class CategoryAdapter  extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
-    private Category[] categories;
-    public static final String EXTRA_CATEGORY = "com.example.praise.recyclerviewlist.CATEGORY";
+public class ToolCategoryAdapter  extends RecyclerView.Adapter<ToolCategoryAdapter.ViewHolder> {
+    private Tool[] tools;
+    public static final String EXTRA_Tool = "com.example.praise.recyclerviewlist.Tool";
 
-    public CategoryAdapter(Category[] categories) {
-        this.categories = categories;
+    public ToolCategoryAdapter(Tool[] tools) {
+        System.out.println("ToolCategoryAdapter");
+        this.tools = tools;
     }
 
     @Override
@@ -28,15 +29,15 @@ public class CategoryAdapter  extends RecyclerView.Adapter<CategoryAdapter.ViewH
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Category category = categories[position];
-        holder.name.setText(category.getName());
-        holder.description.setText(category.getDescription());
-        holder.image.setImageResource(category.getImage());
+        Tool tool = tools[position];
+        holder.name.setText(tool.getName());
+        holder.description.setText(tool.getDescription());
+        holder.image.setImageResource(tool.getImage());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), SingleCategoryActivity.class);
-                intent.putExtra(EXTRA_CATEGORY, (String) category.getUniqueId());
+                Intent intent = new Intent(view.getContext(), tool.getActivity());
+                intent.putExtra(EXTRA_Tool, (String) tool.getUniqueId());
                 view.getContext().startActivity(intent);
             }
         });
@@ -44,7 +45,7 @@ public class CategoryAdapter  extends RecyclerView.Adapter<CategoryAdapter.ViewH
 
     @Override
     public int getItemCount() {
-        return categories.length;
+        return tools.length;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

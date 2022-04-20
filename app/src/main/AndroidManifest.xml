@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Praise">
         <activity
+            android:name=".SingleCategoryActivity"
+            android:exported="false" />
+        <activity
             android:name=".tools.qibla.MainActivity"
             android:exported="false" />
         <activity
