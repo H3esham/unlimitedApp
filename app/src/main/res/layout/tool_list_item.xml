@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
-    android:background="@color/white"
-    android:backgroundTint="@color/purple_700">
+    android:background="@drawable/rounded_blue_border">
 
     <ImageView
         android:id="@+id/category_image"
