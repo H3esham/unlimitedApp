@@ -60,10 +60,9 @@ public class HomePageActivity extends AppCompatActivity {
                                 new Tool("tools_one","القبلة",text,R.drawable.icon, com.example.praise.tools.qibla.MainActivity.class),
                                 new Tool("tools_two","praise",text,R.drawable.icon, com.example.praise.tools.praise.MainActivity.class),
                         }),
-                new Category("unique6","اي حاجه علشان العرض :)","هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.", R.drawable.background_design,
+                new Category("unique6","تشفير","هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.", R.drawable.background_design,
                         new Tool[]{
-                                new Tool("tools_one","القبلة",text,R.drawable.icon, com.example.praise.tools.qibla.MainActivity.class),
-                                new Tool("tools_two","praise",text,R.drawable.icon, com.example.praise.tools.praise.MainActivity.class),
+                                new Tool("tools_one","Md5 Generator",text,R.drawable.icon, com.example.praise.tools.md5Generator.MainActivity.class),
                         })
         };
     }
