@@ -31,6 +31,8 @@ public class SingleCategoryActivity extends AppCompatActivity {
             }
         }
         if (category != null) {
+
+            setTitle(category.getName());
             TextView categoryName = findViewById(R.id.category_name);
             categoryName.setText(category.getName());
             TextView categoryDescription = findViewById(R.id.category_description);
@@ -43,6 +45,8 @@ public class SingleCategoryActivity extends AppCompatActivity {
                 recyclerView.setLayoutManager(new LinearLayoutManager(this));
                 recyclerView.setAdapter(new ToolCategoryAdapter(category.getTools()));
             }
+        }else{
+            setTitle("Error");
         }
     }
 }
