@@ -13,8 +13,11 @@
             android:name=".tools.calculator.MainActivity"
             android:exported="false" />
         <activity
+            android:name=".tools.md5Generator.MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".SingleCategoryActivity"
-            android:exported="false">
+            android:exported="false" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".tools.praise.MainActivity" />
