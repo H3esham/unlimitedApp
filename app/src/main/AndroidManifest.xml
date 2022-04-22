@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Praise">
         <activity
+            android:name=".tools.sha1Generator.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".tools.calculator.MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".tools.md5Generator.MainActivity"
             android:exported="false" />
         <activity

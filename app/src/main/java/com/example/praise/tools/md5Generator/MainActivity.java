@@ -51,8 +51,8 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * get md5 hash from string
-     * @param str
-     * @return
+     * @param str string to hash
+     * @return String|null
      */
     public static String getMD5(String str) {
         try {
