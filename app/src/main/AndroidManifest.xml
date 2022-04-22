@@ -11,7 +11,11 @@
         android:theme="@style/Theme.Praise">
         <activity
             android:name=".SingleCategoryActivity"
-            android:exported="false" />
+            android:exported="false" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".tools.praise.MainActivity" />
+        </activity>
         <activity
             android:name=".tools.qibla.MainActivity"
             android:exported="false" />
