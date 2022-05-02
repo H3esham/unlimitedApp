@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tools.caesarCipher.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tV1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@color/trans_yellow"
+                android:fontFamily="@font/sans_bold"
+                android:gravity="center_vertical|center_horizontal"
+                android:hint="Enter your Text"
+                android:textColor="@color/black"
+                android:textSize="40sp" />
+
+            <EditText
+                android:id="@+id/inputMessage"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/sans_regular"
+                android:hint="your Message"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/keyDt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/sans_regular"
+                android:hint="Key"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/ciphEdt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/sans_regular"
+                android:hint="Cipher Text"
+                android:textColor="@android:color/black" />
+
+            <Button
+                android:id="@+id/btnEncrypt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="20dp"
+                android:background="@android:color/black"
+                android:fontFamily="@font/sans_bold"
+                android:text="Encrypt"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tV2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/sans_bold"
+                android:hint="CryptoCeasar"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="28sp" />
+
+            <Button
+                android:id="@+id/btnDecrypt"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_margin="20dp"
+                android:background="@android:color/black"
+                android:fontFamily="@font/sans_bold"
+                android:text="Decrypt"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Praise">
         <activity
+            android:name=".tools.speedConvert.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".tools.caesarCipher.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".tools.temperature.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".tools.massConverter.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".tools.sha256Generator.MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".tools.sha1Generator.MainActivity"
             android:exported="false" />
         <activity
