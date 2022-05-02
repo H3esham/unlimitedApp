@@ -48,6 +48,7 @@ public class HomePageActivity extends AppCompatActivity {
                                 // translate massConverter to arabic
 
                             new Tool("tools_one","محول المساحات",text,R.drawable.icon, com.example.praise.tools.massConverter.MainActivity.class),
+                            new Tool("tools_two","محول الحرارة",text,R.drawable.icon, com.example.praise.tools.temperature.MainActivity.class),
                         }),
                 new Category("unique4","متنوع","هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.", R.drawable.background_design,
                         new Tool[]{
