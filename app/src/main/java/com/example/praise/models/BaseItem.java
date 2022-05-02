@@ -1,6 +1,8 @@
 package com.example.praise.models;
 
-public class BaseItem {
+import java.io.Serializable;
+
+public class BaseItem implements Serializable {
     private String uniqueId;
     private String name;
     private String description;
