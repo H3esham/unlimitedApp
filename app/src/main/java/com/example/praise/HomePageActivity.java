@@ -45,7 +45,9 @@ public class HomePageActivity extends AppCompatActivity {
                 ),
                 new Category("unique3","تحويلات", "هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.",R.drawable.background_design,
                         new Tool[]{
+                                // translate massConverter to arabic
 
+                            new Tool("tools_one","محول المساحات",text,R.drawable.icon, com.example.praise.tools.massConverter.MainActivity.class),
                         }),
                 new Category("unique4","متنوع","هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.", R.drawable.background_design,
                         new Tool[]{
@@ -59,6 +61,7 @@ public class HomePageActivity extends AppCompatActivity {
                         new Tool[]{
                                 new Tool("tools_one","Md5 Generator",text,R.drawable.icon, com.example.praise.tools.md5Generator.MainActivity.class),
                                 new Tool("tools_two","Sha1 Generator",text,R.drawable.icon, com.example.praise.tools.sha1Generator.MainActivity.class),
+                                new Tool("tools_three","Sha256 Generator",text,R.drawable.icon, com.example.praise.tools.sha256Generator.MainActivity.class),
                         })
         };
     }
