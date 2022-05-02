@@ -1,7 +1,6 @@
 package com.example.praise;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.accessibility.AccessibilityViewCommand;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -33,14 +32,14 @@ public class HomePageActivity extends AppCompatActivity {
                 new Category(
                         "unique1","اسلامي","هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها." ,R.drawable.background_design,
                         new Tool[]{
-                                new Tool("tools_one","القبلة",text,R.drawable.icon, com.example.praise.tools.qibla.MainActivity.class),
+                                new Tool("tools_one","القبلة (beta)",text,R.drawable.icon, com.example.praise.tools.qibla.MainActivity.class),
                                 new Tool("tools_two","praise",text,R.drawable.icon, com.example.praise.tools.praise.MainActivity.class),
                         }
 
                      ),
                 new Category("unique2","رياضة","هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.", R.drawable.background_design,
                         new Tool[]{
-                                new Tool("tools_one","اله حاسبة",text,R.drawable.icon, com.example.praise.tools.calculator.MainActivity.class),
+                                new Tool("tools_one"," (beta) اله حاسبة",text,R.drawable.icon, com.example.praise.tools.calculator.MainActivity.class),
                         }
                 ),
                 new Category("unique3","تحويلات", "هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.",R.drawable.background_design,
@@ -63,6 +62,7 @@ public class HomePageActivity extends AppCompatActivity {
                                 new Tool("tools_one","Md5 Generator",text,R.drawable.icon, com.example.praise.tools.md5Generator.MainActivity.class),
                                 new Tool("tools_two","Sha1 Generator",text,R.drawable.icon, com.example.praise.tools.sha1Generator.MainActivity.class),
                                 new Tool("tools_three","Sha256 Generator",text,R.drawable.icon, com.example.praise.tools.sha256Generator.MainActivity.class),
+                                new Tool("tools_four","Caesar Cipher (beta)",text,R.drawable.icon, com.example.praise.tools.caesarCipher.MainActivity.class),
                         })
         };
     }

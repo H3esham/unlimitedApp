@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Praise">
         <activity
+            android:name=".tools.caesarCipher.MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".tools.temperature.MainActivity"
             android:exported="false" />
         <activity
