@@ -1,31 +1,39 @@
 package com.example.praise;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.ImageView;
 
 import com.example.praise.models.Category;
 import com.example.praise.recyclerviewlist.CategoryAdapter;
 import com.example.praise.recyclerviewlist.ToolCategoryAdapter;
+import com.example.praise.utility.BaseActivity;
 
-public class SingleCategoryActivity extends AppCompatActivity {
+public class SingleCategoryActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_category);
+        if (findViewById(R.id.Toolbar) != null) {
+            myToolbar = (Toolbar) findViewById(R.id.Toolbar);
+        }
         Intent intent = getIntent();
         //get category object from intent
         if (intent.hasExtra(CategoryAdapter.EXTRA_CATEGORY)) {
           try {
               Category category = (Category) intent.getSerializableExtra(CategoryAdapter.EXTRA_CATEGORY);
+              //set category name
+              if (myToolbar != null) {
+                  myToolbar.setTitle(category.getName());
 
-              setTitle(category.getName());
+              }
               TextView categoryName = findViewById(R.id.category_name);
               categoryName.setText(category.getName());
               TextView categoryDescription = findViewById(R.id.category_description);
@@ -40,10 +48,26 @@ public class SingleCategoryActivity extends AppCompatActivity {
               }
           }catch (Exception e){
               e.printStackTrace();
-//              setTitle("Error");
+              if (myToolbar != null) {
+                  myToolbar.setTitle("Error");
+              }
           }
         }else{
-//            setTitle("Error");
+            if (myToolbar != null) {
+                myToolbar.setTitle("Error");
+            }
+        }
+
+        if (myToolbar != null) {
+//            set Back up button for myToolbar
+            myToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intenBack = new Intent(view.getContext(),com.example.praise.HomePageActivity.class);
+                    startActivity(intenBack);
+                }
+            });
+            setSupportActionBar(myToolbar);
         }
     }
 

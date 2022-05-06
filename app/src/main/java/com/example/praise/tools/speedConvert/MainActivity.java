@@ -1,6 +1,5 @@
 package com.example.praise.tools.speedConvert;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
@@ -9,8 +8,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import androidx.appcompat.widget.Toolbar;
+
 import com.example.praise.R;
-public class MainActivity extends AppCompatActivity {
+import com.example.praise.utility.BaseActivity;
+
+public class MainActivity extends BaseActivity {
 
     Spinner sp1, sp2;
     EditText ed1;
@@ -20,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tools_speed_convert_activity_main);
+        if (findViewById(R.id.Toolbar) != null) {
+            myToolbar = (Toolbar) findViewById(R.id.Toolbar);
+            setSupportActionBar(myToolbar);
+        }
         ed1 = findViewById(R.id.txtamount);
         sp1 = findViewById(R.id.spfrom);
         sp2 = findViewById(R.id.spto);

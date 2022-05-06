@@ -9,10 +9,15 @@
     android:paddingEnd="16dp"
     android:background="@drawable/background_design"
     tools:context=".tools.numberConvert.MainActivity">
+
+    <include
+        android:id="@+id/Toolbar"
+        layout="@layout/toolbar" />
+
     <TextView
+        android:layout_marginTop="?attr/actionBarSize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:gravity="center_horizontal"
         android:text="Number Coverter"
         android:textColor="@color/white"

@@ -1,26 +1,28 @@
 package com.example.praise;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.view.menu.MenuBuilder;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.widget.Toolbar;
 
 import com.example.praise.models.Category;
 import com.example.praise.models.Tool;
 import com.example.praise.recyclerviewlist.CategoryAdapter;
+import com.example.praise.utility.BaseActivity;
 
-public class HomePageActivity extends AppCompatActivity {
+public class HomePageActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
+        if (findViewById(R.id.Toolbar) != null) {
+            myToolbar = (Toolbar) findViewById(R.id.Toolbar);
 
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(myToolbar);
-
+            setSupportActionBar(myToolbar);
+        }
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

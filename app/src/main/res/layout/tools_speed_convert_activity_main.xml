@@ -10,7 +10,12 @@
     android:background="@drawable/background_design"
     tools:context=".tools.speedConvert.MainActivity">
 
+
+    <include android:id="@+id/Toolbar" layout="@layout/toolbar" />
+
+
     <LinearLayout
+        android:layout_marginTop="?attr/actionBarSize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <TextView

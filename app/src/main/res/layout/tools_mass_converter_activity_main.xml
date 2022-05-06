@@ -8,6 +8,11 @@
     android:orientation="vertical"
     android:background="@drawable/background_design"
     tools:context=".tools.massConverter.MainActivity">
+    <include
+        android:id="@+id/Toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
