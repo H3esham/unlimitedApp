@@ -40,10 +40,10 @@ public class SingleCategoryActivity extends AppCompatActivity {
               }
           }catch (Exception e){
               e.printStackTrace();
-              setTitle("Error");
+//              setTitle("Error");
           }
         }else{
-            setTitle("Error");
+//            setTitle("Error");
         }
     }
 

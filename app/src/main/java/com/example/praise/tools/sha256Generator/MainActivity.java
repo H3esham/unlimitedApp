@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tools_sha256_generator_activity_main);
-        setTitle("sha256 Generator");
         // Get the button view
         Button button = findViewById(R.id.button);
         TextView inputText = findViewById(R.id.input);

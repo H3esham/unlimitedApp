@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tools_sha1_generator_activity_main);
 
-        setTitle("Sha1 Generator");
         // Get the button view
         Button button = findViewById(R.id.button);
         TextView inputText = findViewById(R.id.input);

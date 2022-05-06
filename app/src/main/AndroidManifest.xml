@@ -8,70 +8,66 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Praise">
+        android:theme="@style/Theme.Praise"
+        >
         <activity
             android:name=".tools.speedConvert.MainActivity"
-            android:exported="false" />
+            android:label="Speed Convert"
+            />
         <activity
             android:name=".tools.caesarCipher.MainActivity"
-            android:exported="false" />
+            android:label="Caesar Cipher"
+            />
         <activity
             android:name=".tools.temperature.MainActivity"
-            android:exported="false" />
+            android:label="Temperature Convert"
+            />
         <activity
             android:name=".tools.massConverter.MainActivity"
-            android:exported="false" />
+            android:label="Mass Convert"
+            />
         <activity
             android:name=".tools.sha256Generator.MainActivity"
-            android:exported="false" />
+            android:label="SHA256 Generator"
+            />
         <activity
             android:name=".tools.sha1Generator.MainActivity"
-            android:exported="false" />
+            android:label="SHA1 Generator"
+            />
         <activity
             android:name=".tools.calculator.MainActivity"
-            android:exported="false" />
+            android:label="Simple Calculator"
+            />
         <activity
             android:name=".tools.md5Generator.MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SingleCategoryActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".tools.praise.MainActivity" />
-        </activity>
+            android:label="MD5 Generator"
+            />
         <activity
             android:name=".tools.qibla.MainActivity"
-            android:exported="false" />
+            android:label="Qibla Compass"
+            />
+        <activity
+            android:name=".tools.numberConvert.MainActivity"
+            android:label="Number Convert" />
+        <activity
+            android:name=".tools.praise.MainActivity"
+            android:label="Praise Tool" />
+        <activity
+            android:name=".tools.currencyConvert.MainActivity"
+            android:label="Currency Convert"  />
+        <activity
+            android:name=".SingleCategoryActivity"
+            android:parentActivityName=".HomePageActivity"
+            />
         <activity
             android:name=".HomePageActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".tools.numberConvert.MainActivity"
-            android:exported="false"
-            android:parentActivityName=".HomePageActivity" />
-        <activity
-            android:name=".tools.praise.MainActivity"
-            android:exported="false"
-            android:parentActivityName=".HomePageActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".tools.praise.MainActivity" />
-        </activity>
-        <activity
-            android:name=".tools.currencyConvert.MainActivity"
-            android:exported="false"
-            android:value=".tools.praise.MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".tools.praise.MainActivity" />
-        </activity>
+
     </application>
 
 </manifest>
