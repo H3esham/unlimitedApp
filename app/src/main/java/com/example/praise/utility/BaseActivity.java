@@ -35,6 +35,8 @@ public class BaseActivity extends AppCompatActivity {
                 // exit the app and kill the process
                 finish();
                 return true;
+            case android.R.id.home:
+                finish();
             default:
                 // If we got here, the user's action was not recognized.
                 // Invoke the superclass to handle it.

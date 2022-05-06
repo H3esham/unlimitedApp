@@ -44,7 +44,7 @@ public class SingleCategoryActivity extends BaseActivity {
                   RecyclerView recyclerView = findViewById(R.id.recyclerView);
                   recyclerView.setHasFixedSize(true);
                   recyclerView.setLayoutManager(new LinearLayoutManager(this));
-                  recyclerView.setAdapter(new ToolCategoryAdapter(category.getTools()));
+                  recyclerView.setAdapter(new ToolCategoryAdapter(category));
               }
           }catch (Exception e){
               e.printStackTrace();
@@ -59,14 +59,6 @@ public class SingleCategoryActivity extends BaseActivity {
         }
 
         if (myToolbar != null) {
-//            set Back up button for myToolbar
-            myToolbar.setNavigationOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intenBack = new Intent(view.getContext(),com.example.praise.HomePageActivity.class);
-                    startActivity(intenBack);
-                }
-            });
             setSupportActionBar(myToolbar);
         }
     }
