@@ -20,6 +20,7 @@ public class HomePageActivity extends BaseActivity {
         setContentView(R.layout.activity_home_page);
         if (findViewById(R.id.Toolbar) != null) {
             myToolbar = (Toolbar) findViewById(R.id.Toolbar);
+            myToolbar.setTitle("HomePage");
             myToolbar.setNavigationIcon(null);
             setSupportActionBar(myToolbar);
         }
