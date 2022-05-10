@@ -5,16 +5,16 @@
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
-        android:title="settings"
+        android:title="@string/toolbar_settings"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_aboutUs"
         android:orderInCategory="100"
-        android:title="about Us"
+        android:title="@string/toolbar_about_us"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_exit"
         android:orderInCategory="100"
-        android:title="exit"
+        android:title="@string/toolbar_exit"
         app:showAsAction="never" />
 </menu>

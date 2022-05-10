@@ -28,7 +28,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginBottom="30dp"
             android:layout_weight="1"
-            android:text="Unlimited Apps"
+            android:text="@string/LoadingActivity_unlimited_apps"
             android:textAlignment="center" />
 
         <ProgressBar

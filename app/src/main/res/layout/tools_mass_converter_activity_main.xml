@@ -30,7 +30,7 @@
 
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="Enter the Number  "
+            android:text="@string/massConverter_enter_the_number"
             android:textColor="@color/black"
             android:textSize="25dp" />
 
@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
 
-            android:text="From"
+            android:text="@string/massConverter_from"
             android:textColor="@color/black"
             android:textSize="25dp" />
 
@@ -73,7 +73,7 @@
 
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="To     "
+            android:text="@string/massConverter_to"
             android:textColor="@color/black"
             android:textSize="25dp" />
 
@@ -95,7 +95,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:background="@color/black"
-            android:text="Convert"
+            android:text="@string/massConverter_convert"
             android:textColor="@color/black"
             android:textSize="23dp" />
 

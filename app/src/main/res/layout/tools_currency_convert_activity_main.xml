@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="50sp"
-        android:text="Currecy_Convert"
+        android:text="@string/currencyConvert_currecy_convert"
         android:textColor="@color/teal_700"
         android:textStyle="bold"
         />
@@ -32,7 +32,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enter the Amount  "
+            android:text="@string/currencyConvert_enter_the_amount"
             android:textSize="25dp"
             android:textColor="@color/teal_700"
             android:textStyle="bold"/>
@@ -53,7 +53,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="From"
+            android:text="@string/currencyConvert_from"
             android:textSize="23dp"
             android:textColor="@color/teal_700"
 
@@ -72,7 +72,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="To"
+            android:text="@string/currencyConvert_to"
             android:textSize="23dp"
             android:textColor="@color/teal_700"
             android:textStyle="bold"
@@ -93,7 +93,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Convert"
+            android:text="@string/currencyConvert_convert"
             android:textSize="23dp"
             android:textColor="@color/teal_700"
             android:textStyle="bold"

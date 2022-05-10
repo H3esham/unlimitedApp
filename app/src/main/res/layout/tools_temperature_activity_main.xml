@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="Enter the Number  "
+            android:text="@string/temperature_enter_the_number"
             android:textSize="25dp"
             android:textColor="@color/black"
             android:textStyle="bold" />
@@ -49,7 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="From"
+            android:text="@string/temperature_from"
             android:textSize="25dp"
             android:textColor="@color/black"
 
@@ -66,7 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="To     "
+            android:text="@string/temperature_to"
             android:textSize="25dp"
             android:textColor="@color/black"
             android:textStyle="bold" />
@@ -85,7 +85,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:background="@color/purple_200"
-            android:text="Convert"
+            android:text="@string/temperature_convert"
             android:textColor="@color/black"
             android:textStyle="bold" />
     </LinearLayout>
