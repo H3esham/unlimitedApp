@@ -1,103 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
     android:background="@drawable/background_design"
     tools:context=".tools.massConverter.MainActivity">
+
     <include
         android:id="@+id/Toolbar"
         layout="@layout/toolbar"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="50sp"
-        android:text="Mass_Convert"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        />
-    <LinearLayout
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Toolbar"
+        app:layout_constraintTop_toBottomOf="@+id/Toolbar">
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+
+
             android:layout_height="wrap_content"
+            android:layout_margin="8dp"
             android:text="Enter the Number  "
-            android:textSize="25dp"
             android:textColor="@color/black"
-            android:textStyle="bold"/>
+            android:textSize="25dp" />
 
         <EditText
             android:id="@+id/txtamount"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+
+
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:textColor="@color/white"
+
+            android:layout_margin="8dp"
             android:background="@color/black"
-            android:textStyle="bold"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+            android:padding="8dp"
+            android:textColor="@color/white" />
+
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+
+
             android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+
             android:text="From"
-            android:textSize="23dp"
             android:textColor="@color/black"
-
-            android:textStyle="bold" />
+            android:textSize="23dp" />
 
         <Spinner
-            android:layout_height="wrap_content"
-            android:ems="10"
             android:id="@+id/spfrom"
-            android:layout_width="wrap_content"
-            android:textColor="@color/black"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+
+
             android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+
+
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
             android:text="To     "
-            android:textSize="23dp"
             android:textColor="@color/black"
-            android:textStyle="bold"
-            />
+            android:textSize="23dp" />
 
         <Spinner
-            android:layout_height="wrap_content"
-            android:ems="10"
             android:id="@+id/spto"
-            android:layout_width="wrap_content"
-            android:textColor="@color/black"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+
+
             android:layout_height="wrap_content"
-            android:text="Convert"
-            android:textSize="23dp"
+            android:layout_margin="8dp"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btn1"
             style="style"
+            android:layout_width="match_parent"
+
+
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
             android:background="@color/black"
+            android:text="Convert"
             android:textColor="@color/black"
-            android:textStyle="bold"
-            android:id="@+id/btn1"/>
+            android:textSize="23dp" />
+
     </LinearLayout>
-</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
