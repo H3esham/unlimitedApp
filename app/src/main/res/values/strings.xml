@@ -24,7 +24,6 @@
     <string name="LoadingActivity_unlimited_apps">Unlimited Apps</string>
     <string name="SingleCategoryActivity_tools">tools</string>
     <string name="category_list_item_textview">TextView</string>
-    <string name="category_list_item_textview">TextView</string>
     <string name="AboutUsActivity_about_us">About us</string>
     <string name="tool_list_item_textview">TextView</string>
     <string name="tool_list_item_textview_desc">TextView</string>
