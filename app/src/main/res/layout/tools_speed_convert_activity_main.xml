@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
 
             android:layout_margin="8dp"
-            android:text="Enter the Number  "
+            android:text="@string/speedConvert_enter_the_number"
             android:textColor="@color/black"
             android:textSize="25dp" />
 
@@ -50,7 +50,7 @@
             android:layout_height="wrap_content"
 
             android:layout_margin="8dp"
-            android:text="From"
+            android:text="@string/speedConvert_from"
             android:textColor="@color/black"
             android:textSize="25dp"
 
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
 
             android:layout_margin="8dp"
-            android:text="To     "
+            android:text="@string/speedConvert_to"
             android:textColor="@color/black"
             android:textSize="25dp"
 
@@ -93,7 +93,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:background="@color/black"
-            android:text="Convert"
+            android:text="@string/speedConvert_convert"
 
             android:textColor="@color/black" />
     </LinearLayout>

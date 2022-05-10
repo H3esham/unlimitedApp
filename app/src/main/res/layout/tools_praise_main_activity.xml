@@ -29,7 +29,7 @@
             android:layout_width="0dp"
             android:layout_height="119dp"
             android:layout_weight="1"
-            android:text="Ram "
+            android:text="@string/praise_ram"
             android:textColor="@color/black"
             android:textSize="60sp" />
 
@@ -38,7 +38,7 @@
             android:layout_width="0dp"
             android:layout_height="119dp"
             android:layout_weight="1"
-            android:text="adan"
+            android:text="@string/praise_adan"
             android:textAlignment="viewEnd"
             android:textColor="@color/black"
             android:textSize="60sp" />
@@ -64,7 +64,7 @@
             android:layout_height="100dp"
             android:layout_marginTop="16dp"
             android:layout_weight="1"
-            android:text="Kar"
+            android:text="@string/praise_kar"
             android:textAlignment="viewStart"
             android:textColor="#FFFAFA"
             android:textSize="48sp" />
@@ -75,7 +75,7 @@
             android:layout_height="100dp"
             android:layout_marginTop="16dp"
             android:layout_weight="1"
-            android:text="eem"
+            android:text="@string/praise_eem"
             android:textAlignment="viewEnd"
             android:textColor="#FFFAFA"
             android:textSize="48sp" />
@@ -99,7 +99,7 @@
             android:layout_height="100dp"
             android:layout_marginTop="16dp"
             android:layout_weight="1"
-            android:text="sphan allah"
+            android:text="@string/praise_sphan_allah"
             android:textAlignment="center"
             android:textColor="#FFFAFA"
             android:textSize="48sp" />
@@ -146,7 +146,7 @@
             android:layout_marginStart="50dp"
             android:layout_marginEnd="50dp"
             android:layout_weight="1"
-            android:text="reset"
+            android:text="@string/praise_reset"
             android:textSize="24sp" />
 
         <Button

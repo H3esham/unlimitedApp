@@ -33,7 +33,7 @@
                 android:background="@color/trans_yellow"
                 android:fontFamily="@font/sans_bold"
                 android:gravity="center_vertical|center_horizontal"
-                android:hint="Enter your Text"
+                android:hint="@string/caesarCipher_enter_your_text"
                 android:textColor="@color/black"
                 android:textSize="40sp" />
 
@@ -43,7 +43,7 @@
                 android:layout_height="50dp"
                 android:layout_margin="20dp"
                 android:fontFamily="@font/sans_regular"
-                android:hint="your Message"
+                android:hint="@string/caesarCipher_your_message"
                 android:textColor="@android:color/black" />
 
             <EditText
@@ -52,7 +52,7 @@
                 android:layout_height="50dp"
                 android:layout_margin="20dp"
                 android:fontFamily="@font/sans_regular"
-                android:hint="Key"
+                android:hint="@string/caesarCipher_key"
                 android:textColor="@android:color/black" />
 
             <EditText
@@ -61,7 +61,7 @@
                 android:layout_height="50dp"
                 android:layout_margin="20dp"
                 android:fontFamily="@font/sans_regular"
-                android:hint="Cipher Text"
+                android:hint="@string/caesarCipher_cipher_text"
                 android:textColor="@android:color/black" />
 
             <Button
@@ -71,7 +71,7 @@
                 android:layout_margin="20dp"
                 android:background="@android:color/black"
                 android:fontFamily="@font/sans_bold"
-                android:text="Encrypt"
+                android:text="@string/caesarCipher_encrypt"
                 android:textColor="@android:color/white" />
 
             <TextView
@@ -80,7 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:fontFamily="@font/sans_bold"
-                android:hint="CryptoCeasar"
+                android:hint="@string/caesarCipher_cryptoceasar"
                 android:textColor="@android:color/holo_blue_dark"
                 android:textSize="28sp" />
 
@@ -91,7 +91,7 @@
                 android:layout_margin="20dp"
                 android:background="@android:color/black"
                 android:fontFamily="@font/sans_bold"
-                android:text="Decrypt"
+                android:text="@string/caesarCipher_decrypt"
                 android:textColor="@android:color/white" />
         </LinearLayout>
     </ScrollView>
