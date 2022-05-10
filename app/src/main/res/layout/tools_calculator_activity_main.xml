@@ -7,8 +7,13 @@
     android:orientation="vertical"
     android:background="@color/black"
     tools:context=".tools.calculator.MainActivity">
+
+    <include android:id="@+id/Toolbar"
+        layout="@layout/toolbar" />
+
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
         android:layout_height="0dp"
         android:orientation="vertical"
         android:layout_weight="3">

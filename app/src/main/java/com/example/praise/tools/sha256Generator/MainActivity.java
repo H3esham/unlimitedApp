@@ -1,6 +1,5 @@
 package com.example.praise.tools.sha256Generator;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -9,15 +8,21 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.praise.R;
+import androidx.appcompat.widget.Toolbar;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.praise.R;
+import com.example.praise.utility.BaseActivity;
+
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tools_sha256_generator_activity_main);
-        setTitle("sha256 Generator");
+        if (findViewById(R.id.Toolbar) != null) {
+            myToolbar = (Toolbar) findViewById(R.id.Toolbar);
+            setSupportActionBar(myToolbar);
+        }
         // Get the button view
         Button button = findViewById(R.id.button);
         TextView inputText = findViewById(R.id.input);

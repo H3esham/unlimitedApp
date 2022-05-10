@@ -1,6 +1,5 @@
 package com.example.praise.tools.praise;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -8,9 +7,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.praise.R;
+import androidx.appcompat.widget.Toolbar;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.praise.R;
+import com.example.praise.utility.BaseActivity;
+
+public class MainActivity extends BaseActivity {
     private TextView praise;
     private Button minusBtn;
     private Button plusBtn;
@@ -38,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tools_praise_main_activity);
+        if (findViewById(R.id.Toolbar) != null) {
+            myToolbar = (Toolbar) findViewById(R.id.Toolbar);
+            setSupportActionBar(myToolbar);
+        }
         praise = (TextView) findViewById(R.id.p0);
         minusBtn = (Button) findViewById(R.id.minusBtn);
         minusBtn.setOnClickListener(clickListener);

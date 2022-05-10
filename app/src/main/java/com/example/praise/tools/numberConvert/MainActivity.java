@@ -1,6 +1,6 @@
 package com.example.praise.tools.numberConvert;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 
 import android.graphics.Color;
@@ -13,8 +13,9 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.praise.R;
+import com.example.praise.utility.BaseActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     private EditText editTextDecimal;
     private EditText editTextBinary;
     private EditText editTextOctal;
@@ -28,7 +29,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tool_number_convert_activity_main);
-
+        if (findViewById(R.id.Toolbar) != null) {
+            myToolbar = (Toolbar) findViewById(R.id.Toolbar);
+            setSupportActionBar(myToolbar);
+        }
         editTextDecimal = findViewById(R.id.etvDecimal);
         editTextBinary = findViewById(R.id.etvBinary);
         editTextOctal = findViewById(R.id.etvOctal);

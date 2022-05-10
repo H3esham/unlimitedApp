@@ -11,14 +11,15 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.praise.R;
 import com.example.praise.models.Tool;
+import com.example.praise.models.Category;
 
 public class ToolCategoryAdapter  extends RecyclerView.Adapter<ToolCategoryAdapter.ViewHolder> {
     private Tool[] tools;
     public static final String EXTRA_Tool = "com.example.praise.recyclerviewlist.Tool";
 
-    public ToolCategoryAdapter(Tool[] tools) {
+    public ToolCategoryAdapter(Category category) {
         System.out.println("ToolCategoryAdapter");
-        this.tools = tools;
+        this.tools = category.getTools();
     }
 
     @Override

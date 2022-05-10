@@ -1,6 +1,5 @@
 package com.example.praise.tools.currencyConvert;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
@@ -10,9 +9,12 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.praise.R;
+import androidx.appcompat.widget.Toolbar;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.praise.R;
+import com.example.praise.utility.BaseActivity;
+
+public class MainActivity extends BaseActivity {
     Spinner sp1,sp2;
     EditText ed1;
     Button b1;
@@ -25,7 +27,10 @@ public class MainActivity extends AppCompatActivity {
         sp1=findViewById(R.id.spfrom);
         sp2=findViewById(R.id.spto);
         b1=findViewById(R.id.btn1);
-
+        if (findViewById(R.id.Toolbar) != null) {
+            myToolbar = (Toolbar) findViewById(R.id.Toolbar);
+            setSupportActionBar(myToolbar);
+        }
         String[] from={"USD","BTC"};
         ArrayAdapter ad=new ArrayAdapter<String>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,from);
         sp1.setAdapter(ad);

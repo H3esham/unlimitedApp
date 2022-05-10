@@ -1,7 +1,5 @@
 package com.example.praise.tools.caesarCipher;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.text.Editable;
 import android.view.View;
@@ -9,16 +7,21 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import com.example.praise.R;
+import com.example.praise.utility.BaseActivity;
+
 import java.util.Locale;
 
 import static com.example.praise.tools.caesarCipher.Utility.encrypt1;
 import static com.example.praise.tools.caesarCipher.Utility.decrypt1;
 
-public class MainActivity extends AppCompatActivity {
+import androidx.appcompat.widget.Toolbar;
+
+public class MainActivity extends BaseActivity {
     private Button encrypt,decrypt;
     private EditText message,cipher,key;
     private TextView screenOutput;
     private static final String ALPHABETSTRING="abcdefghijklmnopqrstuvwxyz";
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +31,13 @@ public class MainActivity extends AppCompatActivity {
         decrypt = findViewById(R.id.btnDecrypt);
         screenOutput =findViewById(R.id.tV1);
 
+
+        if (findViewById(R.id.Toolbar) != null) {
+            myToolbar = (Toolbar) findViewById(R.id.Toolbar);
+
+            setSupportActionBar(myToolbar);
+        }
+        
         message = findViewById(R.id.inputMessage);
         cipher =  findViewById(R.id.ciphEdt);
         key = findViewById(R.id.keyDt);

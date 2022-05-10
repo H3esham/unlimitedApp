@@ -12,8 +12,9 @@ import com.example.praise.R;
 import com.example.praise.SingleCategoryActivity;
 import com.example.praise.models.Category;
 
+
 public class CategoryAdapter  extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
-    private Category[] categories;
+    private final Category[] categories;
     public static final String EXTRA_CATEGORY = "com.example.praise.recyclerviewlist.CATEGORY";
 
     public CategoryAdapter(Category[] categories) {
@@ -36,7 +37,9 @@ public class CategoryAdapter  extends RecyclerView.Adapter<CategoryAdapter.ViewH
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), SingleCategoryActivity.class);
-                intent.putExtra(EXTRA_CATEGORY, (String) category.getUniqueId());
+                //send the category object to the next activity
+                intent.putExtra(EXTRA_CATEGORY, category);
+
                 view.getContext().startActivity(intent);
             }
         });
@@ -47,7 +50,7 @@ public class CategoryAdapter  extends RecyclerView.Adapter<CategoryAdapter.ViewH
         return categories.length;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView name;
         public TextView description;
         public ImageView image;

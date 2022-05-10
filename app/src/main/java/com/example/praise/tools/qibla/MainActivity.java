@@ -1,6 +1,5 @@
 package com.example.praise.tools.qibla;
 
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.hardware.Sensor;
@@ -11,9 +10,13 @@ import android.os.Bundle;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
-import com.example.praise.R;
 
-public class MainActivity extends AppCompatActivity implements SensorEventListener {
+import androidx.appcompat.widget.Toolbar;
+
+import com.example.praise.R;
+import com.example.praise.utility.BaseActivity;
+
+public class MainActivity extends BaseActivity implements SensorEventListener {
     private ImageView compass;
     private static SensorManager manager;
     private static Sensor sensor;
@@ -23,7 +26,10 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tools_qibla_activity_main);
-
+        if (findViewById(R.id.Toolbar) != null) {
+            myToolbar = (Toolbar) findViewById(R.id.Toolbar);
+            setSupportActionBar(myToolbar);
+        }
         compass = findViewById(R.id.compass);
         manager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
     }

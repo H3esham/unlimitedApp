@@ -1,0 +1,36 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/style_header">
+
+
+        <ListPreference
+            app:defaultValue="dark"
+            app:entries="@array/style_entries"
+            app:entryValues="@array/style_values"
+            app:key="style"
+            app:title="@string/style_title"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+ <PreferenceCategory app:title="@string/language_header">
+
+        <ListPreference
+            app:defaultValue="english"
+            app:entries="@array/language_entries"
+            app:entryValues="@array/language_values"
+            app:key="language"
+            app:title="@string/language_title"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/auth_header">
+
+        <EditTextPreference
+            app:key="password"
+            app:title="@string/auth_title"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
