@@ -6,4 +6,19 @@
     <string name="go_to_qibla">go to al qibla</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="style_title">app style</string>
+    <string name="style_header">Theme Preference</string>
+    <string name="language_header">Language</string>
+    <string name="language_title">app Language</string>
+    <string name="auth_header">App auth</string>
+    <string name="auth_title">set username and password</string>
 </resources>

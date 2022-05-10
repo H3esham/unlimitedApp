@@ -24,11 +24,17 @@ public class BaseActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        View view = new View(this);
+        Intent intent;
         switch (item.getItemId()) {
             case R.id.action_aboutUs:
 //                move to about us activity
-                View view = new View(this);
-                Intent intent = new Intent(view.getContext(), com.example.praise.pages.AboutUsActivity.class);
+                intent = new Intent(view.getContext(), com.example.praise.pages.AboutUsActivity.class);
+                startActivity(intent);
+                return true;
+            case R.id.action_settings:
+//                move to Settings activity
+                intent = new Intent(view.getContext(), com.example.praise.pages.SettingsActivity.class);
                 startActivity(intent);
                 return true;
             case R.id.action_exit:

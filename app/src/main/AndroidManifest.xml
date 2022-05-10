@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Praise">
         <activity
+            android:name=".pages.SettingsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_settings" />
+        <activity
             android:name=".pages.AboutUsActivity"
             android:exported="false" />
         <activity
@@ -53,8 +57,7 @@
             android:parentActivityName=".HomePageActivity" />
         <activity
             android:name=".HomePageActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".LoadingActivity"
             android:exported="true">

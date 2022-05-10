@@ -17,6 +17,7 @@ public class AboutUsActivity extends BaseActivity {
         setContentView(R.layout.pages_about_us_activity);
         if (findViewById(R.id.Toolbar) != null) {
             myToolbar = (Toolbar) findViewById(R.id.Toolbar);
+            myToolbar.setTitle("About Us");
             myToolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
