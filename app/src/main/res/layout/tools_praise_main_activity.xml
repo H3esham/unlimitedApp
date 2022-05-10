@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/download"
-    tools:context="com.example.praise.tools.praise.MainActivity">
+    tools:context="com.example.unlimitedApp.tools.praise.MainActivity">
 
     <include android:id="@+id/Toolbar" layout="@layout/toolbar" />
 
