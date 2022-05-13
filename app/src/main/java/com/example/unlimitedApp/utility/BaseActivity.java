@@ -22,14 +22,16 @@ public class BaseActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.toolbar_main, menu);
         // check if the user is logged in
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
+
+        menu.findItem(R.id.action_login).setVisible(false);
+        menu.findItem(R.id.action_logout).setVisible(false);
+
         if (mAuth.getCurrentUser() != null) {
             // user is logged in
-            menu.findItem(R.id.action_login).setVisible(false);
             menu.findItem(R.id.action_logout).setVisible(true);
         }else{
             // user is not logged in
             menu.findItem(R.id.action_login).setVisible(true);
-            menu.findItem(R.id.action_logout).setVisible(false);
         }
 
         return true;

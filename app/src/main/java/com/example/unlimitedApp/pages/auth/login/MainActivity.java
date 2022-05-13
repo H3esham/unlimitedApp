@@ -18,8 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     final private String TAG = "Pages_LOGIN_MainActivity";
 
-    TextView register_btn;
-
+    TextView register_btn,without_login_btn;
     EditText email,password;
     Button login_btn;
     private FirebaseAuth mAuth;
@@ -34,6 +33,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         register_btn = (TextView) findViewById(R.id.register_btn);
         register_btn.setOnClickListener(this);
 
+        without_login_btn = (TextView) findViewById(R.id.without_login_btn);
+        without_login_btn.setOnClickListener(this);
+
 
         email = (EditText) findViewById(R.id.email);
         password = (EditText) findViewById(R.id.password);
@@ -46,8 +48,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.register_btn:
-                Intent intent = new Intent(v.getContext(), com.example.unlimitedApp.pages.auth.register.MainActivity.class);
-                startActivity(intent);
+                startActivity(new Intent(v.getContext(), com.example.unlimitedApp.pages.auth.register.MainActivity.class));
+                break;
+            case R.id.without_login_btn:
+                startActivity(new Intent(v.getContext(), com.example.unlimitedApp.HomePageActivity.class));
                 break;
             case R.id.login_btn:
                 loginUser();

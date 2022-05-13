@@ -70,12 +70,12 @@
                 android:textAlignment="center" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/without_login_btn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_weight="1"
-                android:text="TextView"
+                android:text="home page without login"
                 android:textAlignment="center" />
 
         </LinearLayout>

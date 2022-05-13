@@ -24,28 +24,23 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    TextView login_btn;
+    TextView login_btn,without_login_btn;
 
     EditText fullName, age, email, password, confirmPassword;
 
     ProgressBar progressBar;
     private FirebaseAuth mAuth;
 
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        if (currentUser != null) {
-            startActivity(new Intent(MainActivity.this, HomePageActivity.class));
-        }
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pages_register_activity);
-        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser != null) {
+            startActivity(new Intent(MainActivity.this, HomePageActivity.class));
+        }
+
         // progress bar for loading
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         progressBar.setVisibility(View.GONE);
@@ -53,6 +48,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //set back button (back to login page)
         login_btn = (TextView) findViewById(R.id.register_btn);
         login_btn.setLinksClickable(true);
+        // go to login page without login
+        without_login_btn = (TextView) findViewById(R.id.without_login_btn);
+        without_login_btn.setLinksClickable(true);
 
         //set form inputs
         fullName = (EditText) findViewById(R.id.fullName);
@@ -63,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         login_btn.setOnClickListener(this);
+        without_login_btn.setOnClickListener(this);
         findViewById(R.id.register).setOnClickListener(this);
 
     }
@@ -73,6 +72,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.register_btn:
                 startActivity(new Intent(v.getContext(), com.example.unlimitedApp.pages.auth.login.MainActivity.class));
+                break;
+            case R.id.without_login_btn:
+                startActivity(new Intent(v.getContext(), com.example.unlimitedApp.HomePageActivity.class));
                 break;
             case R.id.register:
                 registerUser();
