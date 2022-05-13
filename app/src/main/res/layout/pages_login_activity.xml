@@ -50,7 +50,7 @@
             android:layout_height="20dp" />
 
         <Button
-            android:id="@+id/registre"
+            android:id="@+id/login_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/login_page_button_login" />
@@ -61,7 +61,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/login_btn"
+                android:id="@+id/register_btn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"

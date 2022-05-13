@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -20,6 +19,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -29,19 +29,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     EditText fullName, age, email, password, confirmPassword;
 
     ProgressBar progressBar;
-
     private FirebaseAuth mAuth;
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser != null) {
+            startActivity(new Intent(MainActivity.this, HomePageActivity.class));
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pages_register_activity);
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
         // progress bar for loading
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         progressBar.setVisibility(View.GONE);
 
         //set back button (back to login page)
-        login_btn = (TextView) findViewById(R.id.login_btn);
+        login_btn = (TextView) findViewById(R.id.register_btn);
         login_btn.setLinksClickable(true);
 
         //set form inputs
@@ -61,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.login_btn:
+            case R.id.register_btn:
                 startActivity(new Intent(v.getContext(), com.example.unlimitedApp.pages.auth.login.MainActivity.class));
                 break;
             case R.id.register:
@@ -70,14 +80,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    public void registerUser() {
+    private void registerUser() {
 
         String fullName = this.fullName.getText().toString();
         String age = this.age.getText().toString();
         String email = this.email.getText().toString();
         String password = this.password.getText().toString();
         String confirmPassword = this.confirmPassword.getText().toString();
-
+        // get current activity
         if (fullName.isEmpty()) {
             this.fullName.setError("Full Name is required");
             this.fullName.requestFocus();
@@ -135,37 +145,45 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         progressBar.setVisibility(View.VISIBLE);
-        // use firebase to register user
+        //create user and save it to firebase
+
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            System.out.println("User registered successfully");
                             // Sign in success, update UI with the signed-in user's information
-                            System.out.println(mAuth.getCurrentUser().getUid());
-                            // change age from string to int
-                            int ageInt = Integer.parseInt(age);
-                            User user = new User(fullName,email,password,ageInt);
-                            // add user to database
-                            FirebaseDatabase.getInstance().getReference("users")
-                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                    .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
-                                    progressBar.setVisibility(View.GONE);
-                                    if (task.isSuccessful()) {
-                                        Toast.makeText(MainActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
-                                    } else {
-                                        Toast.makeText(MainActivity.this, "Registration Failed", Toast.LENGTH_SHORT).show();
-                                    }
-                                } //end onComplete
-                                    }); //end setValue
-                            } else {
-                                // registration failed
-                                Toast.makeText(MainActivity.this, "Registration Failed", Toast.LENGTH_SHORT).show();
+                            Integer intAge = Integer.parseInt(age);
+                            User user = new User(fullName, email, password, intAge);
+                            FirebaseDatabase database = FirebaseDatabase.getInstance();
+                            DatabaseReference myRef = database.getReference("users");
+                            myRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user)
+                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                               @Override
+                               public void onComplete(@NonNull Task<Void> task) {
+                                   if (task.isSuccessful()) {
+                                       progressBar.setVisibility(View.GONE);
+                                       Toast.makeText(MainActivity.this, "User created successfully", Toast.LENGTH_SHORT).show();
+                                       // Sign in success, update UI with the signed-in user's information
+                                       FirebaseUser fUser = FirebaseAuth.getInstance().getCurrentUser();
+                                       Intent intent = new Intent(MainActivity.this, HomePageActivity.class);
+                                       startActivity(intent);
+                                       finish();
+
+                                   }else{
+                                       progressBar.setVisibility(View.GONE);
+                                       Toast.makeText(MainActivity.this, "Error: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                   }
+                               }
+                            });
+
+                        }else{
+                            // If sign in fails, display a message to the user.
+                            Toast.makeText(MainActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
+
     }
+
 }

@@ -82,4 +82,6 @@
     <string name="pages_register_age_hit">Age</string>
     <string name="pages_register_button">register now</string>
     <string name="login_page_confirmPassword_hint">Confirm Password</string>
+    <string name="toolbar_login">login</string>
+    <string name="toolbar_logout">logout</string>
 </resources>
