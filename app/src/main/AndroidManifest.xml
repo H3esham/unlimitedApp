@@ -10,9 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UnlimitedApp">
         <activity
-            android:name=".ui.login.LoginActivity"
-            android:exported="false"
-            android:label="@string/title_activity_login" />
+            android:name=".pages.auth.register.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pages.auth.login.MainActivity"
+            android:exported="false" />
         <activity
             android:name=".pages.SettingsActivity"
             android:exported="false"

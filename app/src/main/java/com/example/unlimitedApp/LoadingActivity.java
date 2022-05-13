@@ -6,9 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.example.unlimitedApp.ui.login.LoginActivity;
+import com.example.unlimitedApp.pages.auth.login.MainActivity;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class LoadingActivity extends AppCompatActivity {
+
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +22,13 @@ public class LoadingActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(LoadingActivity.this, LoginActivity.class);
+                Intent intent;
+                mAuth = FirebaseAuth.getInstance();
+                if (mAuth.getCurrentUser() != null) {
+                    intent = new Intent(LoadingActivity.this, HomePageActivity.class);
+                }else{
+                    intent = new Intent(LoadingActivity.this, MainActivity.class);
+                }
                 startActivity(intent);
                 finish();
             }

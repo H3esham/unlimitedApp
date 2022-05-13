@@ -72,13 +72,16 @@
     <string name="toolbar_settings">settings</string>
     <string name="toolbar_about_us">about Us</string>
     <string name="toolbar_exit">exit</string>
-    <string name="title_activity_login">LoginActivity</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
+    <string name="login_pgae_title">Login Page</string>
+    <string name="login_page_password_hint">Password</string>
+    <string name="login_page_email_hint">Email</string>
+    <string name="login_page_button_login">Login Now</string>
+    <string name="login_page_register_btn">Register</string>
+    <string name="pages_register_title" > register</string>
+    <string name="pages_register_full_name_hit">Full name</string>
+    <string name="pages_register_age_hit">Age</string>
+    <string name="pages_register_button">register now</string>
+    <string name="login_page_confirmPassword_hint">Confirm Password</string>
+    <string name="toolbar_login">login</string>
+    <string name="toolbar_logout">logout</string>
 </resources>
