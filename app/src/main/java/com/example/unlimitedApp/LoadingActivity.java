@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.example.unlimitedApp.ui.login.LoginActivity;
+
 public class LoadingActivity extends AppCompatActivity {
 
     @Override
@@ -17,7 +19,7 @@ public class LoadingActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(LoadingActivity.this, HomePageActivity.class);
+                Intent intent = new Intent(LoadingActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
             }
