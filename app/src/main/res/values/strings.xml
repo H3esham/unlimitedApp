@@ -77,4 +77,9 @@
     <string name="login_page_email_hint">Email</string>
     <string name="login_page_button_login">Login Now</string>
     <string name="login_page_register_btn">Register</string>
+    <string name="pages_register_title" > register</string>
+    <string name="pages_register_full_name_hit">Full name</string>
+    <string name="pages_register_age_hit">Age</string>
+    <string name="pages_register_button">register now</string>
+    <string name="login_page_confirmPassword_hint">Confirm Password</string>
 </resources>
