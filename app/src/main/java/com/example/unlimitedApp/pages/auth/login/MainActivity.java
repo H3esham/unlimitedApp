@@ -64,19 +64,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String email = this.email.getText().toString();
         String password = this.password.getText().toString();
         if(email.isEmpty()){
-            this.email.setError("Email is required");
+            this.email.setError(getString(R.string.email_required));
             this.email.requestFocus();
             return;
         }
 
         if(password.isEmpty()){
-            this.password.setError("Password is required");
+            this.password.setError(getString(R.string.password_required));
             this.password.requestFocus();
             return;
         }
 
         if(!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            this.email.setError("Please enter a valid email");
+            this.email.setError(getString(R.string.email_invalid));
             this.email.requestFocus();
             return;
         }
@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }else{
                         // If sign in fails, display a message to the user.
 //                        Log.w(TAG, "signInWithEmail:failure", task.getException());
-                        Toast.makeText(MainActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, getString(R.string.Authentication_failed), Toast.LENGTH_SHORT).show();
                     }
                 });
     }

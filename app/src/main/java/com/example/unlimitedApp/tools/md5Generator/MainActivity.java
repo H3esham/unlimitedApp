@@ -38,9 +38,9 @@ public class MainActivity extends BaseActivity {
                 if (input.length() > 0 && getMD5(input) != null) {
 
                     //add text to outputText
-                    outputText.setText("Result: "+getMD5(input));
+                    outputText.setText(getString(R.string.result)+getMD5(input));
                     outputText.setVisibility(View.VISIBLE);
-                    Toast.makeText(MainActivity.this, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, getString(R.string.copy_to_clipboard), Toast.LENGTH_SHORT).show();
 
                     //copy text to clipboard
                     android.content.ClipboardManager clipboard = (android.content.ClipboardManager) getSystemService(CLIPBOARD_SERVICE);

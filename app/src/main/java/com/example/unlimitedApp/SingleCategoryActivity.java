@@ -48,12 +48,12 @@ public class SingleCategoryActivity extends BaseActivity {
           }catch (Exception e){
               e.printStackTrace();
               if (myToolbar != null) {
-                  myToolbar.setTitle("Error");
+                  myToolbar.setTitle(getString(R.string.error));
               }
           }
         }else{
             if (myToolbar != null) {
-                myToolbar.setTitle("Error");
+                myToolbar.setTitle(getString(R.string.error));
             }
         }
 
