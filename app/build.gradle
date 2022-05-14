@@ -43,4 +43,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     // calculatAge
     implementation 'net.danlew:android.joda:2.10.9.1'
+    //qr code
+    implementation 'com.google.zxing:core:3.2.0'
 }
