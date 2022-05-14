@@ -111,4 +111,5 @@
     <string name="calculate">Calculate</string>
     <string name="result_btn">Result</string>
     <string name="_0_years_0_months_0_days">0 Years | 0 Months | 0 Days</string>
+    <string name="tools_stopwatch_title">Stopwatch</string>
 </resources>
