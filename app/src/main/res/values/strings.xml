@@ -128,4 +128,6 @@
     <string name="message_or_key_is_empty">message or key  inputs is empty</string>
     <string name="share_btn">Share</string>
     <string name="share_with">share_with</string>
+    <string name="add_a_new_item_here">Add a new item here</string>
+    <string name="tools_todo_title">todo</string>
 </resources>

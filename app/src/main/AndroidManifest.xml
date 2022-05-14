@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UnlimitedApp">
         <activity
+            android:name=".tools.todo.MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".tools.vigenereCipher.MainActivity"
             android:exported="false" />
         <activity
