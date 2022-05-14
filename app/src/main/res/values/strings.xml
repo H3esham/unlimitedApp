@@ -122,4 +122,6 @@
     <string name="include_numbers">include numbers</string>
     <string name="random_password_invalid_length">invalid_length</string>
     <string name="random_password_title">random password</string>
+    <string name="Enter_your_Message_Here">Enter your Message Here</string>
+    <string name="Enter_your_Key">Enter your Key</string>
 </resources>
