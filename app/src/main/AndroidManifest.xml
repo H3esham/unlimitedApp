@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UnlimitedApp">
         <activity
+            android:name=".tools.calculatAge.MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".pages.auth.register.MainActivity"
             android:exported="false" />
         <activity
