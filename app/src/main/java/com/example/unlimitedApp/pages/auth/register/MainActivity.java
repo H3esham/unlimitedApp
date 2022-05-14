@@ -91,57 +91,57 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String confirmPassword = this.confirmPassword.getText().toString();
         // get current activity
         if (fullName.isEmpty()) {
-            this.fullName.setError("Full Name is required");
+            this.fullName.setError(getString(R.string.error_field_fullname_required));
             this.fullName.requestFocus();
             return;
         }
         if (age.isEmpty()) {
-            this.age.setError("Age is required");
+            this.age.setError(getString(R.string.error_field_age_required));
             this.age.requestFocus();
             return;
         }
         if (email.isEmpty()) {
-            this.email.setError("Email is required");
+            this.email.setError(getString(R.string.error_field_email_required));
             this.email.requestFocus();
             return;
         }
         if (password.isEmpty()) {
-            this.password.setError("Password is required");
+            this.password.setError(getString(R.string.error_field_password_required));
             this.password.requestFocus();
             return;
         }
         if (confirmPassword.isEmpty()) {
-            this.confirmPassword.setError("Confirm Password is required");
+            this.confirmPassword.setError(getString(R.string.error_field_confirm_password_required));
             this.confirmPassword.requestFocus();
             return;
         }
 
         if (!password.equals(confirmPassword)) {
-            this.confirmPassword.setError("Password does not match");
+            this.confirmPassword.setError(getString(R.string.error_field_confirm_password_not_match));
             this.confirmPassword.requestFocus();
             return;
         }
 
         if (age.length() > 2) {
-            this.age.setError("Age must be less than 3 digits");
+            this.age.setError(getString(R.string.error_field_age_length2_invalid));
             this.age.requestFocus();
             return;
         }
 
         if (email.length() > 30) {
-            this.email.setError("Email must be less than 30 characters");
+            this.email.setError(getString(R.string.error_field_email_length_invalid));
             this.email.requestFocus();
             return;
         }
 
         if(!(email.contains("@") && email.contains("."))) {
-            this.email.setError("Email must be valid");
+            this.email.setError(getString(R.string.error_field_email_invalid));
             this.email.requestFocus();
             return;
         }
 
         if (password.length() > 30) {
-            this.password.setError("Password must be less than 30 characters");
+            this.password.setError(getString(R.string.error_field_password_length_invalid));
             this.password.requestFocus();
             return;
         }
@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                public void onComplete(@NonNull Task<Void> task) {
                                    if (task.isSuccessful()) {
                                        progressBar.setVisibility(View.GONE);
-                                       Toast.makeText(MainActivity.this, "User created successfully", Toast.LENGTH_SHORT).show();
+                                       Toast.makeText(MainActivity.this, getString(R.string.User_created_successfully), Toast.LENGTH_SHORT).show();
                                        // Sign in success, update UI with the signed-in user's information
                                        FirebaseUser fUser = FirebaseAuth.getInstance().getCurrentUser();
                                        Intent intent = new Intent(MainActivity.this, HomePageActivity.class);
@@ -174,14 +174,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                                    }else{
                                        progressBar.setVisibility(View.GONE);
-                                       Toast.makeText(MainActivity.this, "Error: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                       Toast.makeText(MainActivity.this, getString(R.string.error_is)+ task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                                    }
                                }
                             });
 
                         }else{
                             // If sign in fails, display a message to the user.
-                            Toast.makeText(MainActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, getString(R.string.Authentication_failed), Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

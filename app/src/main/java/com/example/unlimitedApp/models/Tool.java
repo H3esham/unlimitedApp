@@ -3,8 +3,8 @@ package com.example.unlimitedApp.models;
 public class Tool extends BaseItem {
 
     private Class activity;
-    public Tool(String uniqueId, String name, String description, int image, Class activity) {
-        super(uniqueId, name, description, image);
+    public Tool(String name, String description, int image, Class activity) {
+        super(name, description, image);
         this.activity = activity;
     }
 

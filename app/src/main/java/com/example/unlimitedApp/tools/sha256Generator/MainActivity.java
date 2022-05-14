@@ -38,9 +38,9 @@ public class MainActivity extends BaseActivity {
                 if (input.length() > 0 && getSHA256(input) != null) {
 
                     //add text to outputText
-                    outputText.setText("Result: "+getSHA256(input));
+                    outputText.setText(getString(R.string.result)+getSHA256(input));
                     outputText.setVisibility(View.VISIBLE);
-                    Toast.makeText(com.example.unlimitedApp.tools.sha256Generator.MainActivity.this, "Copied to clipboard", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(com.example.unlimitedApp.tools.sha256Generator.MainActivity.this, getString(R.string.copy_to_clipboard), Toast.LENGTH_SHORT).show();
 
                     //copy text to clipboard
                     android.content.ClipboardManager clipboard = (android.content.ClipboardManager) getSystemService(CLIPBOARD_SERVICE);

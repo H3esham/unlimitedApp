@@ -3,13 +3,11 @@ package com.example.unlimitedApp.models;
 import java.io.Serializable;
 
 public class BaseItem implements Serializable {
-    private String uniqueId;
     private String name;
     private String description;
     private int image;
 
-    public BaseItem(String uniqueId, String name, String description, int image) {
-        this.uniqueId = uniqueId;
+    public BaseItem(String name, String description, int image) {
         this.name = name;
         this.description = description;
         this.image = image;
@@ -39,11 +37,4 @@ public class BaseItem implements Serializable {
         this.image = image;
     }
 
-    public String getUniqueId() {
-        return uniqueId;
-    }
-
-    public void setUniqueId(String uniqueId) {
-        this.uniqueId = uniqueId;
-    }
 }

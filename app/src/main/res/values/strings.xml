@@ -84,4 +84,25 @@
     <string name="login_page_confirmPassword_hint">Confirm Password</string>
     <string name="toolbar_login">login</string>
     <string name="toolbar_logout">logout</string>
+    <string name="email_required">Email is required</string>
+    <string name="password_required">Password is required</string>
+    <string name="email_invalid">Please enter a valid email</string>
+    <string name="Authentication_failed">Authentication failed.</string>
+    <string name="error_field_fullname_required">Full Name is required</string>
+    <string name="error_field_age_required">Age is required</string>
+    <string name="error_field_email_required">Email is required</string>
+    <string name="error_field_password_required">Password is required</string>
+    <string name="error_field_confirm_password_required">Confirm Password is required</string>
+    <string name="error_field_confirm_password_not_match">Password does not match</string>
+    <string name="error_field_age_length2_invalid">Age must be less than 3 digits</string>
+    <string name="error_field_email_length_invalid">Email must be less than 30 characters</string>
+    <string name="error_field_email_invalid">Email must be valid</string>
+    <string name="error_field_password_length_invalid">Password must be less than 30 characters</string>
+    <string name="User_created_successfully">User created successfully</string>
+    <string name="error_is">"Error: "</string>
+    <string name="about_us_title">About Us</string>
+    <string name="home_page_title">homepage</string>
+    <string name="error">Error</string>
+    <string name="result">Result: </string>
+    <string name="copy_to_clipboard">Copied to clipboard</string>
 </resources>

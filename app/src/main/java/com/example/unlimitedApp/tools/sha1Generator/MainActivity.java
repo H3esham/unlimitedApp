@@ -39,7 +39,7 @@ public class MainActivity extends BaseActivity {
                 if (input.length() > 0 && getSHA1(input) != null) {
 
                     //add text to outputText
-                    outputText.setText("Result: "+getSHA1(input));
+                    outputText.setText(getString(R.string.result)+getSHA1(input));
                     outputText.setVisibility(View.VISIBLE);
                     Toast.makeText(com.example.unlimitedApp.tools.sha1Generator.MainActivity.this, "Copied to clipboard", Toast.LENGTH_SHORT).show();
 

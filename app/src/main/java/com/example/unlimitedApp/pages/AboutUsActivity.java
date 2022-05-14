@@ -17,12 +17,11 @@ public class AboutUsActivity extends BaseActivity {
         setContentView(R.layout.pages_about_us_activity);
         if (findViewById(R.id.Toolbar) != null) {
             myToolbar = (Toolbar) findViewById(R.id.Toolbar);
-            myToolbar.setTitle("About Us");
+            myToolbar.setTitle(getString(R.string.about_us_title));
             myToolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intenBack = new Intent(view.getContext(),com.example.unlimitedApp.HomePageActivity.class);
-                    startActivity(intenBack);
+                    startActivity(new Intent(view.getContext(),com.example.unlimitedApp.HomePageActivity.class));
                 }
             });
             setSupportActionBar(myToolbar);

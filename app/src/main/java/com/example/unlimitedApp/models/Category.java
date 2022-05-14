@@ -4,8 +4,8 @@ public class Category extends BaseItem {
 
     private Tool[] tools;
 
-    public Category(String uniqueId,String name, String description, int image, Tool[] tools) {
-        super(uniqueId, name, description, image);
+    public Category(String name, String description, int image, Tool[] tools) {
+        super(name, description, image);
         this.tools = tools;
     }
 
@@ -28,24 +28,6 @@ public class Category extends BaseItem {
             }
             tempTools[tempTools.length - 1] = tool;
             tools = tempTools;
-        }
-    }
-
-    public void removeTool(Tool tool) {
-        if (tools != null) {
-            for (int i = 0; i < tools.length; i++) {
-                if (tools[i].getUniqueId().equals(tool.getUniqueId())) {
-                    Tool[] tempTools = new Tool[tools.length - 1];
-                    for (int j = 0; j < i; j++) {
-                        tempTools[j] = tools[j];
-                    }
-                    for (int j = i; j < tempTools.length; j++) {
-                        tempTools[j] = tools[j + 1];
-                    }
-                    tools = tempTools;
-                    return;
-                }
-            }
         }
     }
 
