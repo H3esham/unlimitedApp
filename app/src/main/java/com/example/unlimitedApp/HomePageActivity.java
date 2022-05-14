@@ -10,7 +10,6 @@ import com.example.unlimitedApp.models.Category;
 import com.example.unlimitedApp.models.Tool;
 import com.example.unlimitedApp.recyclerviewlist.CategoryAdapter;
 import com.example.unlimitedApp.utility.BaseActivity;
-import com.example.unlimitedApp.R;
 public class HomePageActivity extends BaseActivity {
 
     @Override
