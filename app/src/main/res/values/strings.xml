@@ -112,9 +112,20 @@
     <string name="result_btn">Result</string>
     <string name="_0_years_0_months_0_days">0 Years | 0 Months | 0 Days</string>
     <string name="tools_stopwatch_title">Stopwatch</string>
-<!--    qr code -->
+    <!--    qr code -->
     <string name="save">Save</string>
     <string name="generate">Generate</string>
     <string name="enter_text">Enter Text</string>
     <string name="value_required">Value Required</string>
+    <string name="reset">resst</string>
+    <string name="lenght">length:</string>
+    <string name="include_numbers">include numbers</string>
+    <string name="random_password_invalid_length">invalid_length</string>
+    <string name="random_password_title">random password</string>
+    <string name="Enter_your_Message_Here">Enter your Message Here</string>
+    <string name="Enter_your_Key">Enter your Key</string>
+    <string name="vigenereCipher_title">vigenere Cipher</string>
+    <string name="message_or_key_is_empty">message or key  inputs is empty</string>
+    <string name="share_btn">Share</string>
+    <string name="share_with">share_with</string>
 </resources>

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.unlimitedApp">
-<!--   for  qr code -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- for  qr code -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,6 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.UnlimitedApp">
+        <activity
+            android:name=".tools.vigenereCipher.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".tools.randomPassword.MainActivity"
+            android:exported="false" />
         <activity
             android:name=".tools.qrgenearator.MainActivity"
             android:exported="false" />
