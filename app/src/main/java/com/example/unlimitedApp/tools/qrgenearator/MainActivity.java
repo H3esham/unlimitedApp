@@ -15,7 +15,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
@@ -23,7 +23,9 @@ import com.example.unlimitedApp.tools.qrgenearator.library.qrgenearator.QRGConte
 import com.example.unlimitedApp.tools.qrgenearator.library.qrgenearator.QRGEncoder;
 import com.example.unlimitedApp.tools.qrgenearator.library.qrgenearator.QRGSaver;
 import com.example.unlimitedApp.R;
-public class MainActivity extends AppCompatActivity {
+import com.example.unlimitedApp.utility.BaseActivity;
+
+public class MainActivity extends BaseActivity {
 
 
     private EditText edtValue;
@@ -32,13 +34,16 @@ public class MainActivity extends AppCompatActivity {
     private String savePath = Environment.getExternalStorageDirectory().getPath() + "/QRCode/";
     private Bitmap bitmap;
     private QRGEncoder qrgEncoder;
-    private AppCompatActivity activity;
+    private BaseActivity activity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tools_qr_genearator_activity_main);
-
+        if (findViewById(R.id.Toolbar) != null) {
+            myToolbar = (Toolbar) findViewById(R.id.Toolbar);
+            setSupportActionBar(myToolbar);
+        }
         qrImage = findViewById(R.id.qr_image);
         edtValue = findViewById(R.id.edt_value);
         activity = this;
