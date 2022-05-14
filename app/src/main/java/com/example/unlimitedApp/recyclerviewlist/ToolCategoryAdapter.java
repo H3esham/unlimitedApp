@@ -38,7 +38,7 @@ public class ToolCategoryAdapter  extends RecyclerView.Adapter<ToolCategoryAdapt
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), tool.getActivity());
-                intent.putExtra(EXTRA_Tool, (String) tool.getUniqueId());
+                intent.putExtra(EXTRA_Tool, tool);
                 view.getContext().startActivity(intent);
             }
         });
