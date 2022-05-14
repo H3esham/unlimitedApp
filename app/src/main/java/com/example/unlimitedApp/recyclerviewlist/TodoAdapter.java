@@ -16,6 +16,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.unlimitedApp.R;
 import com.example.unlimitedApp.models.Todo;
 
+import java.io.OptionalDataException;
+
 public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.ViewHolder> {
     private Todo[] todos;
 
@@ -34,11 +36,13 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.ViewHolder> {
         Todo todo = todos[position];
         holder.title.setText(todo.getTitle());
         holder.check_btn.setChecked(todo.isDone());
-        // hide divider is last item
+        // hide divider if it last item
         if (position == todos.length - 1) {
             holder.divider.setVisibility(View.GONE);
+        }else {
+            holder.divider.setVisibility(View.VISIBLE);
         }
-
+        // strike through text if done
         holder.check_btn.setOnClickListener(v -> {
            todo.setStatus(!todo.isDone());
            if (todo.isDone()) {
@@ -47,6 +51,7 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.ViewHolder> {
                holder.title.setPaintFlags(holder.title.getPaintFlags() & (~Paint.STRIKE_THRU_TEXT_FLAG));
            }
         });
+        // delete button
         holder.delete_btn.setOnClickListener(v -> {
             // check confirmation dialog
             AlertDialog alertDialog = new AlertDialog.Builder(v.getContext()).create();
@@ -62,6 +67,11 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.ViewHolder> {
             alertDialog.show();
 
         });
+    }
+
+    public void deleteAll(){
+        todos = new Todo[0];
+        notifyDataSetChanged();
     }
 
     @Override
@@ -104,6 +114,7 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.ViewHolder> {
             check_btn = itemView.findViewById(R.id.check_btn);
             delete_btn = itemView.findViewById(R.id.delete_btn);
             divider = itemView.findViewById(R.id.divider);
+
 
         }
     }

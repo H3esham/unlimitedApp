@@ -131,4 +131,9 @@
     <string name="add_a_new_item_here">Add a new item here</string>
     <string name="tools_todo_title">todo</string>
     <string name="tools_todo_error_empty_title">Please enter a title</string>
+    <string name="action_delete_all">action_delete_all</string>
+    <string name="tools_todo_delete_all_title">Confirm</string>
+    <string name="tools_todo_delete_all_message">Are you sure you want to delete all items?</string>
+    <string name="tools_todo_delete_all_positive">yes</string>
+    <string name="tools_todo_delete_all_negative">no</string>
 </resources>
