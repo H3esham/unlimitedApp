@@ -55,7 +55,7 @@ public class HomePageActivity extends BaseActivity {
                         }),
                 new Category("متنوع","هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.", R.drawable.background_design,
                         new Tool[]{
-
+                            new Tool("حساب العمر",text,R.drawable.icon,com.example.unlimitedApp.tools.calculatAge.MainActivity.class)
                         }
                         ),
                 new Category("انترنت","هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.", R.drawable.background_design,

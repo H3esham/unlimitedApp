@@ -105,4 +105,10 @@
     <string name="error">Error</string>
     <string name="result">Result: </string>
     <string name="copy_to_clipboard">Copied to clipboard</string>
+    <string name="calculat_age_title">Calculat Age</string>
+    <string name="_01_01_2022">01/01/2022</string>
+    <string name="to">To</string>
+    <string name="calculate">Calculate</string>
+    <string name="result_btn">Result</string>
+    <string name="_0_years_0_months_0_days">0 Years | 0 Months | 0 Days</string>
 </resources>

@@ -12,19 +12,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.Period;
 import java.util.Calendar;
 import java.util.Date;
-
 import org.joda.time.Period;
 import org.joda.time.PeriodType;
 
 import com.example.unlimitedApp.R;
-public class MainActivity extends AppCompatActivity {
+import com.example.unlimitedApp.utility.BaseActivity;
+
+public class MainActivity extends BaseActivity {
     Button btBirth,btToday,btCalculate;
     TextView tvResult;
     DatePickerDialog.OnDateSetListener dateSetListener1,dateSetListener2;
@@ -33,6 +33,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tools_calculat_age_activity_main);
+        // toolbar
+        if (findViewById(R.id.Toolbar) != null) {
+            myToolbar = (Toolbar) findViewById(R.id.Toolbar);
+            myToolbar.setTitle(getString(R.string.calculat_age_title));
+            setSupportActionBar(myToolbar);
+        }
+
         btBirth =findViewById(R.id.bt_birth);
         btToday =findViewById(R.id.bt_today);
         btCalculate =findViewById(R.id.bt_calculate);
