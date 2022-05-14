@@ -130,4 +130,5 @@
     <string name="share_with">share_with</string>
     <string name="add_a_new_item_here">Add a new item here</string>
     <string name="tools_todo_title">todo</string>
+    <string name="tools_todo_error_empty_title">Please enter a title</string>
 </resources>

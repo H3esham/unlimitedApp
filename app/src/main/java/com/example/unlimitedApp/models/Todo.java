@@ -36,4 +36,8 @@ public class Todo {
     public void setStatus(boolean status) {
         this.status = status;
     }
+
+    public boolean isDone() {
+        return status;
+    }
 }
