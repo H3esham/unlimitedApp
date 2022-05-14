@@ -124,4 +124,8 @@
     <string name="random_password_title">random password</string>
     <string name="Enter_your_Message_Here">Enter your Message Here</string>
     <string name="Enter_your_Key">Enter your Key</string>
+    <string name="vigenereCipher_title">vigenere Cipher</string>
+    <string name="message_or_key_is_empty">message or key  inputs is empty</string>
+    <string name="share_btn">Share</string>
+    <string name="share_with">share_with</string>
 </resources>

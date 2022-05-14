@@ -60,14 +60,14 @@
             >
 
             <RadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/decrypt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="@string/caesarCipher_decrypt" />
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/encrypt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -79,6 +79,17 @@
             android:id="@+id/textView5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="message handled" />
+
+        <TextView
+            android:id="@+id/message_handled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/share_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/share_btn" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -70,6 +70,7 @@ public class HomePageActivity extends BaseActivity {
                                 new Tool("Sha1 Generator",text,R.drawable.icon, com.example.unlimitedApp.tools.sha1Generator.MainActivity.class),
                                 new Tool("Sha256 Generator",text,R.drawable.icon, com.example.unlimitedApp.tools.sha256Generator.MainActivity.class),
                                 new Tool("Caesar Cipher (beta)",text,R.drawable.icon, com.example.unlimitedApp.tools.caesarCipher.MainActivity.class),
+                                new Tool("vigenere Cipher",text,R.drawable.icon, com.example.unlimitedApp.tools.vigenereCipher.MainActivity.class),
                         })
         };
     }
