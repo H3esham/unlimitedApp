@@ -2,6 +2,7 @@ package com.example.unlimitedApp.tools.stopwatch;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,8 +13,9 @@ import android.widget.TextView;
 import java.util.Locale;
 
 import com.example.unlimitedApp.R;
+import com.example.unlimitedApp.utility.BaseActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     private  int seconds;
     private boolean running;
     private boolean wasRunning;
@@ -22,6 +24,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tools_stopwatch_activity_main);
+
+        if (findViewById(R.id.Toolbar) != null) {
+            myToolbar = (Toolbar) findViewById(R.id.Toolbar);
+            myToolbar.setTitle(getString(R.string.tools_stopwatch_title));
+            setSupportActionBar(myToolbar);
+        }
+
         if (savedInstanceState !=null){
             savedInstanceState.getInt("seconds");
             savedInstanceState.getBoolean("running");
