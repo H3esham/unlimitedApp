@@ -9,6 +9,12 @@
         android:visible="false"
         app:showAsAction="ifRoom" />
     <item
+        android:id="@+id/action_save_all"
+        android:icon="@android:drawable/ic_menu_save"
+        android:title="@string/action_delete_all"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+    <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/toolbar_settings"

@@ -15,11 +15,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.unlimitedApp.R;
 import com.example.unlimitedApp.models.Todo;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
-import java.io.OptionalDataException;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.ViewHolder> {
     private Todo[] todos;
+    private View App;
 
     public TodoAdapter(Todo[] todos) {
         this.todos = todos;
@@ -102,6 +106,11 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.ViewHolder> {
         todos = newTodos;
         notifyDataSetChanged();
     }
+
+    public boolean saveAll(){
+        return true;
+    }
+
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView title;

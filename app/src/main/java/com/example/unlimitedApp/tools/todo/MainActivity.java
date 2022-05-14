@@ -17,7 +17,10 @@ import com.example.unlimitedApp.R;
 import com.example.unlimitedApp.models.Todo;
 import com.example.unlimitedApp.recyclerviewlist.TodoAdapter;
 import com.example.unlimitedApp.utility.BaseActivity;
+import com.google.firebase.auth.FirebaseAuth;
 
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
 import java.util.Objects;
 
 public class MainActivity extends BaseActivity {
@@ -25,14 +28,24 @@ public class MainActivity extends BaseActivity {
     private RecyclerView recyclerView;
     ImageButton add_btn;
     EditText newItem;
-    MenuItem action_delete_all;
+    MenuItem action_delete_all,action_save_all;
     MainActivity activity;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.toolbar_main, menu);
         action_delete_all = menu.findItem(R.id.action_delete_all);
         action_delete_all.setVisible(true);
+        // check if user is logged in firabase
+        try {
+            if (getCurrentUser()) {
+                action_save_all = menu.findItem(R.id.action_save_all);
+                action_save_all.setVisible(true);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         return  true;
     }
 
@@ -55,6 +68,19 @@ public class MainActivity extends BaseActivity {
                 });
                 builder.show();
                 return true;
+                case R.id.action_save_all:
+                    try {
+                        if (((TodoAdapter) Objects.requireNonNull(recyclerView.getAdapter())).saveAll()) {
+                            Toast.makeText(this, "save all items", Toast.LENGTH_SHORT).show();
+                        }else{
+                            Toast.makeText(this, "save all items, not happend", Toast.LENGTH_SHORT).show();
+                        }
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        Toast.makeText(this, "save all items, not happend", Toast.LENGTH_SHORT).show();
+                    }
+                    return true;
             default:
                 return super.onOptionsItemSelected(item);
 
@@ -86,7 +112,8 @@ public class MainActivity extends BaseActivity {
 
         add_btn = (ImageButton) findViewById(R.id.add_btn);
         newItem = (EditText) findViewById(R.id.newItem);
-        Todo[] todos = {};
+        Todo[] todos = new Todo[0];
+
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -107,5 +134,13 @@ public class MainActivity extends BaseActivity {
 
     }
 
+    public boolean getCurrentUser(){
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        if(auth.getCurrentUser() != null){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
 }
