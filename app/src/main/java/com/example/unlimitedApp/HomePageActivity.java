@@ -56,11 +56,13 @@ public class HomePageActivity extends BaseActivity {
                         new Tool[]{
                             new Tool("حساب العمر",text,R.drawable.icon,com.example.unlimitedApp.tools.calculatAge.MainActivity.class),
                             new Tool("ساعه الايقاف",text,R.drawable.icon,com.example.unlimitedApp.tools.stopwatch.MainActivity.class),
-                            new Tool("qr",text,R.drawable.icon,com.example.unlimitedApp.tools.qrgenearator.MainActivity.class)
+                            new Tool("qr",text,R.drawable.icon,com.example.unlimitedApp.tools.qrgenearator.MainActivity.class),
+                            new Tool("randomPassword",text,R.drawable.icon,com.example.unlimitedApp.tools.randomPassword.MainActivity.class)
                         }
                         ),
                 new Category("انترنت","هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.", R.drawable.background_design,
                         new Tool[]{
+                                new Tool("random Password",text,R.drawable.icon,com.example.unlimitedApp.tools.randomPassword.MainActivity.class)
                         }),
                 new Category("تشفير","هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.", R.drawable.background_design,
                         new Tool[]{
