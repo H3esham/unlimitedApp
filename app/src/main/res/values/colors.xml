@@ -16,5 +16,8 @@
     <color name="trans_skyblue">#7508EFE1</color>
     <color name="trans_red">#75CC0000</color>
     <color name="trans_turq">#75FF5722</color>
-
+<!--    qr code-->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
 </resources>
