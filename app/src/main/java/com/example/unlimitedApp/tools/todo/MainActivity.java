@@ -1,11 +1,13 @@
 package com.example.unlimitedApp.tools.todo;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.AlertDialog;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,9 +20,12 @@ import com.example.unlimitedApp.models.Todo;
 import com.example.unlimitedApp.recyclerviewlist.TodoAdapter;
 import com.example.unlimitedApp.utility.BaseActivity;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
-import java.io.FileInputStream;
-import java.io.ObjectInputStream;
+import java.util.Arrays;
 import java.util.Objects;
 
 public class MainActivity extends BaseActivity {
@@ -28,8 +33,7 @@ public class MainActivity extends BaseActivity {
     private RecyclerView recyclerView;
     ImageButton add_btn;
     EditText newItem;
-    MenuItem action_delete_all,action_save_all;
-    MainActivity activity;
+    MenuItem action_delete_all;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -37,15 +41,6 @@ public class MainActivity extends BaseActivity {
         getMenuInflater().inflate(R.menu.toolbar_main, menu);
         action_delete_all = menu.findItem(R.id.action_delete_all);
         action_delete_all.setVisible(true);
-        // check if user is logged in firabase
-        try {
-            if (getCurrentUser()) {
-                action_save_all = menu.findItem(R.id.action_save_all);
-                action_save_all.setVisible(true);
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-        }
         return  true;
     }
 
@@ -68,19 +63,6 @@ public class MainActivity extends BaseActivity {
                 });
                 builder.show();
                 return true;
-                case R.id.action_save_all:
-                    try {
-                        if (((TodoAdapter) Objects.requireNonNull(recyclerView.getAdapter())).saveAll()) {
-                            Toast.makeText(this, "save all items", Toast.LENGTH_SHORT).show();
-                        }else{
-                            Toast.makeText(this, "save all items, not happend", Toast.LENGTH_SHORT).show();
-                        }
-
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                        Toast.makeText(this, "save all items, not happend", Toast.LENGTH_SHORT).show();
-                    }
-                    return true;
             default:
                 return super.onOptionsItemSelected(item);
 
@@ -93,8 +75,6 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tools_todo_activity_main);
-
-        activity = this;
 
         if (findViewById(R.id.Toolbar) != null) {
             myToolbar = (Toolbar) findViewById(R.id.Toolbar);
@@ -112,13 +92,40 @@ public class MainActivity extends BaseActivity {
 
         add_btn = (ImageButton) findViewById(R.id.add_btn);
         newItem = (EditText) findViewById(R.id.newItem);
-        Todo[] todos = new Todo[0];
 
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(new TodoAdapter(todos));
+      /*
+        // get todo list of user from firebase datebase and set it to recycler view
+        if (FirebaseAuth.getInstance().getCurrentUser() != null) {
+            FirebaseDatabase.getInstance()
+                    .getReference("users")
+                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                    .child("todos")
+                    .addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            // get todo list from firebase database
+                            Todo[] todoList = new Todo[0];
+                            for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                                Todo todo = snapshot.getValue(Todo.class);
+                                todoList = new Todo[]{todo};
+                            }
+                            // set todo list to recycler view
+                            recyclerView.setAdapter(new TodoAdapter(todoList));
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                        }
 
+                        }
+                    );  // end of addValueEventListener
+        }else{
+            recyclerView.setAdapter(new TodoAdapter(new Todo[0]));
+        }
+*/
+        recyclerView.setAdapter(new TodoAdapter(new Todo[0]));
         add_btn.setOnClickListener(v -> {
             String title = newItem.getText().toString();
             if (title.length() > 0) {
@@ -134,13 +141,7 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    public boolean getCurrentUser(){
-        FirebaseAuth auth = FirebaseAuth.getInstance();
-        if(auth.getCurrentUser() != null){
-            return true;
-        }else{
-            return false;
-        }
-    }
+
+
 
 }
