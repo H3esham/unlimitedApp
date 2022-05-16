@@ -6,8 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,8 +28,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     EditText fullName, age, email, password, confirmPassword;
 
-    ProgressBar progressBar;
     private FirebaseAuth mAuth;
+
+    Button register;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,9 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(new Intent(MainActivity.this, HomePageActivity.class));
         }
 
-        // progress bar for loading
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        progressBar.setVisibility(View.GONE);
+
 
         //set back button (back to login page)
         login_btn = (TextView) findViewById(R.id.register_btn);
@@ -58,11 +57,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         email = (EditText) findViewById(R.id.email);
         password = (EditText) findViewById(R.id.password);
         confirmPassword = (EditText) findViewById(R.id.confirmPassword);
-
+        register = (Button) findViewById(R.id.register);
+        register.setOnClickListener(this);
 
         login_btn.setOnClickListener(this);
         without_login_btn.setOnClickListener(this);
-        findViewById(R.id.register).setOnClickListener(this);
 
     }
 
@@ -146,7 +145,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         }
 
-        progressBar.setVisibility(View.VISIBLE);
+        // make register disable
+        register.setEnabled(false);
+        register.setText(getString(R.string.register_btn_loading));
         //create user and save it to firebase
 
         mAuth.createUserWithEmailAndPassword(email, password)
@@ -164,7 +165,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                @Override
                                public void onComplete(@NonNull Task<Void> task) {
                                    if (task.isSuccessful()) {
-                                       progressBar.setVisibility(View.GONE);
+
                                        Toast.makeText(MainActivity.this, getString(R.string.User_created_successfully), Toast.LENGTH_SHORT).show();
                                        // Sign in success, update UI with the signed-in user's information
                                        FirebaseUser fUser = FirebaseAuth.getInstance().getCurrentUser();
@@ -173,9 +174,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                        finish();
 
                                    }else{
-                                       progressBar.setVisibility(View.GONE);
                                        Toast.makeText(MainActivity.this, getString(R.string.error_is)+ task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                                    }
+
+                                   register.setEnabled(true);
+                                   register.setText(getString(R.string.pages_register_button));
                                }
                             });
 
