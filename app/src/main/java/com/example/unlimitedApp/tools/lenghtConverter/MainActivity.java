@@ -1,5 +1,4 @@
 package com.example.unlimitedApp.tools.lenghtConverter;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
@@ -9,9 +8,12 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.unlimitedApp.R;
+import androidx.appcompat.widget.Toolbar;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.unlimitedApp.R;
+import com.example.unlimitedApp.utility.BaseActivity;
+
+public class MainActivity extends BaseActivity {
 
     Spinner sp1,sp2;
     EditText ed1;
@@ -21,6 +23,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pages_lenght_converter_activity_main);
+        if (findViewById(R.id.Toolbar) != null) {
+            myToolbar = (Toolbar) findViewById(R.id.Toolbar);
+            myToolbar.setTitle(getString(R.string.lenghtConverter_title));
+            setSupportActionBar(myToolbar);
+        }
         ed1=findViewById(R.id.txtamount);
         sp1=findViewById(R.id.spfrom);
         sp2=findViewById(R.id.spto);

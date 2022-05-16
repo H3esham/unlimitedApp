@@ -6,99 +6,97 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_design"
     tools:context=".tools.lenghtConverter.MainActivity">
+    <include
+        android:id="@+id/Toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout" />
+
+
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:orientation="vertical"
-        >
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Toolbar"
+        app:layout_constraintTop_toBottomOf="@+id/Toolbar">
+
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+
+
             android:layout_height="wrap_content"
-            android:textSize="50sp"
-            android:text="lenght_Convert"
-            android:textColor="@color/button_color"
-            android:textStyle="bold"
-            />
-        <LinearLayout
+            android:layout_margin="8dp"
+            android:textColor="@color/black"
+            android:textSize="25dp"
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="Enter the Number  "
-                android:textSize="25dp"
-                android:textColor="@color/button_color"
                 android:textStyle="bold"/>
 
             <EditText
                 android:id="@+id/txtamount"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:textColor="@color/black"
-                android:background="@color/button_color"
-                android:textStyle="bold"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+                android:layout_margin="8dp"
+                android:background="@color/black"
+                android:padding="8dp"
+                android:textColor="@color/white"/>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="From"
-                android:textSize="23dp"
-                android:textColor="@color/button_color"
+                android:layout_width="match_parent"
 
-                android:textStyle="bold" />
+
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:text="From"/>
 
             <Spinner
-                android:layout_height="wrap_content"
                 android:ems="10"
                 android:id="@+id/spfrom"
+                android:layout_width="match_parent"
 
-                android:background="@drawable/spiner_design"
-                android:layout_width="wrap_content"
-                android:textColor="@color/black"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
+
                 android:layout_height="wrap_content"
-                android:text="To     "
-                android:textSize="23dp"
-                android:textColor="@color/button_color"
-                android:textStyle="bold"
+                android:layout_margin="8dp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/massConverter_to"
+                android:textColor="@color/black"
+                android:textSize="25dp"
                 />
 
             <Spinner
-                android:layout_height="wrap_content"
                 android:ems="10"
                 android:id="@+id/spto"
-                android:background="@drawable/spiner_design"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+
+
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
                 android:textColor="@color/black"
                 />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
             <Button
-                android:layout_width="wrap_content"
+                style="style"
+                android:layout_width="match_parent"
+
+
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@color/black"
+                android:textColor="@color/black"
+
                 android:text="Convert"
                 android:textSize="23dp"
-                style="style"
-                android:background="@color/button_color"
-                android:textColor="@color/white"
-                android:textStyle="bold"
+
                 android:id="@+id/btn1"/>
         </LinearLayout>
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

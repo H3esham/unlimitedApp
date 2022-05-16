@@ -137,4 +137,5 @@
     <string name="tools_todo_delete_all_positive">yes</string>
     <string name="tools_todo_delete_all_negative">no</string>
     <string name="register_btn_loading">creating account...</string>
+    <string name="lenghtConverter_title">lenght Converter</string>
 </resources>
