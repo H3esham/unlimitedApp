@@ -51,6 +51,7 @@ public class HomePageActivity extends BaseActivity {
                             new Tool("محول المساحات",text,R.drawable.icon, com.example.unlimitedApp.tools.massConverter.MainActivity.class),
                             new Tool("محول الحرارة",text,R.drawable.icon, com.example.unlimitedApp.tools.temperature.MainActivity.class),
                             new Tool("محول السرعات",text,R.drawable.icon, com.example.unlimitedApp.tools.speedConvert.MainActivity.class),
+                            new Tool("محول الاوزان",text,R.drawable.icon, com.example.unlimitedApp.tools.lenghtConverter.MainActivity.class)
                         }),
                 new Category("متنوع","هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.", R.drawable.background_design,
                         new Tool[]{
