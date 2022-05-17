@@ -29,6 +29,7 @@ public class MainActivity extends BaseActivity {
         b1=findViewById(R.id.btn1);
         if (findViewById(R.id.Toolbar) != null) {
             myToolbar = (Toolbar) findViewById(R.id.Toolbar);
+            myToolbar.setTitle("Currency Convert");
             setSupportActionBar(myToolbar);
         }
         String[] from={"USD","BTC"};

@@ -1,102 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@drawable/wp"
+    android:background="@drawable/background_design"
     tools:context=".tools.currencyConvert.MainActivity">
+    <include
+        android:id="@+id/Toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout" />
 
-    <include android:id="@+id/Toolbar"
-        layout="@layout/toolbar" />
 
     <LinearLayout
-        android:layout_marginTop="?attr/actionBarSize"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="50sp"
-        android:text="@string/currencyConvert_currecy_convert"
-        android:textColor="@color/teal_700"
-        android:textStyle="bold"
-        />
-    <LinearLayout
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Toolbar"
+        app:layout_constraintTop_toBottomOf="@+id/Toolbar">
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+
+
             android:layout_height="wrap_content"
-            android:text="@string/currencyConvert_enter_the_amount"
+            android:layout_margin="8dp"
+            android:textColor="@color/black"
             android:textSize="25dp"
-            android:textColor="@color/teal_700"
+
+            android:text="Enter the Number  "
             android:textStyle="bold"/>
 
         <EditText
             android:id="@+id/txtamount"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:textColor="@color/white"
+            android:layout_margin="8dp"
             android:background="@color/black"
-            android:textStyle="bold"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+            android:padding="8dp"
+            android:textColor="@color/white"/>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/currencyConvert_from"
-            android:textSize="23dp"
-            android:textColor="@color/teal_700"
+            android:layout_width="match_parent"
 
-            android:textStyle="bold" />
+
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:text="From"/>
 
         <Spinner
-            android:layout_height="wrap_content"
             android:ems="10"
             android:id="@+id/spfrom"
-            android:layout_width="wrap_content"
-            android:textColor="@color/teal_700"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+
+
             android:layout_height="wrap_content"
-            android:text="@string/currencyConvert_to"
-            android:textSize="23dp"
-            android:textColor="@color/teal_700"
-            android:textStyle="bold"
+            android:layout_margin="8dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/massConverter_to"
+            android:textColor="@color/black"
+            android:textSize="25dp"
             />
 
         <Spinner
-            android:layout_height="wrap_content"
             android:ems="10"
             android:id="@+id/spto"
-            android:layout_width="wrap_content"
-            android:textColor="@color/teal_700"
+            android:layout_width="match_parent"
 
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <Button
-            android:layout_width="wrap_content"
+
             android:layout_height="wrap_content"
-            android:text="@string/currencyConvert_convert"
+            android:layout_margin="8dp"
+            android:textColor="@color/black"
+            />
+        <Button
+            style="style"
+            android:layout_width="match_parent"
+
+
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@color/black"
+            android:textColor="@color/black"
+
+            android:text="Convert"
             android:textSize="23dp"
-            android:textColor="@color/teal_700"
-            android:textStyle="bold"
+
             android:id="@+id/btn1"/>
     </LinearLayout>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
