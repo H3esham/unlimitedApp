@@ -4,12 +4,14 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.webkit.WebView;
+import android.widget.Button;
 
 import com.example.unlimitedApp.R;
 import com.example.unlimitedApp.utility.BaseActivity;
 
 public class MainActivity extends BaseActivity {
     WebView webView;
+    Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,9 +22,15 @@ public class MainActivity extends BaseActivity {
             setSupportActionBar(myToolbar);
         }
         webView = (WebView) findViewById(R.id.webView);
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.getSettings().setDomStorageEnabled(true);
-        webView.loadUrl("https://www.fast.com/");
+        // hide webview
+        webView.setVisibility(WebView.GONE);
+
+        button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(v -> {
+            webView.loadUrl("https://www.speedtest.net/");
+            webView.setVisibility(WebView.VISIBLE);
+            button.setVisibility(Button.GONE);
+        });
 
     }
 }
