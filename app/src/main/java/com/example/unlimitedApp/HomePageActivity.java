@@ -64,7 +64,8 @@ public class HomePageActivity extends BaseActivity {
                         ),
                 new Category("انترنت","هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.", R.drawable.background_design,
                         new Tool[]{
-                                new Tool("random Password",text,R.drawable.icon,com.example.unlimitedApp.tools.randomPassword.MainActivity.class)
+                                new Tool("random Password",text,R.drawable.icon,com.example.unlimitedApp.tools.randomPassword.MainActivity.class),
+                                new Tool("internet Speed",text,R.drawable.icon,com.example.unlimitedApp.tools.internetSpeed.MainActivity.class)
                         }),
                 new Category("تشفير","هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.", R.drawable.background_design,
                         new Tool[]{
