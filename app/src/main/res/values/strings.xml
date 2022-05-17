@@ -128,4 +128,32 @@
     <string name="message_or_key_is_empty">message or key  inputs is empty</string>
     <string name="share_btn">Share</string>
     <string name="share_with">share_with</string>
+    <string name="add_a_new_item_here">Add a new item here</string>
+    <string name="tools_todo_title">todo</string>
+    <string name="tools_todo_error_empty_title">Please enter a title</string>
+    <string name="action_delete_all">action_delete_all</string>
+    <string name="tools_todo_delete_all_title">Confirm</string>
+    <string name="tools_todo_delete_all_message">Are you sure you want to delete all items?</string>
+    <string name="tools_todo_delete_all_positive">yes</string>
+    <string name="tools_todo_delete_all_negative">no</string>
+    <string name="register_btn_loading">creating account...</string>
+    <string name="lenghtConverter_title">lenght Converter</string>
+    <string name="_9">9</string>
+    <string name="div">/</string>
+    <string name="_8">8</string>
+    <string name="_7">7</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="multiply">*</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="minus">-</string>
+    <string name="ac">AC</string>
+    <string name="zero">0</string>
+    <string name="plus">+</string>
+    <string name="cancel">C</string>
+    <string name="equal">=</string>
+    <string name="percent">%</string>
 </resources>

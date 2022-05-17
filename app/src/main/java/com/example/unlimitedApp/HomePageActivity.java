@@ -51,18 +51,21 @@ public class HomePageActivity extends BaseActivity {
                             new Tool("محول المساحات",text,R.drawable.icon, com.example.unlimitedApp.tools.massConverter.MainActivity.class),
                             new Tool("محول الحرارة",text,R.drawable.icon, com.example.unlimitedApp.tools.temperature.MainActivity.class),
                             new Tool("محول السرعات",text,R.drawable.icon, com.example.unlimitedApp.tools.speedConvert.MainActivity.class),
+                            new Tool("محول الاوزان",text,R.drawable.icon, com.example.unlimitedApp.tools.lenghtConverter.MainActivity.class)
                         }),
                 new Category("متنوع","هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.", R.drawable.background_design,
                         new Tool[]{
                             new Tool("حساب العمر",text,R.drawable.icon,com.example.unlimitedApp.tools.calculatAge.MainActivity.class),
                             new Tool("ساعه الايقاف",text,R.drawable.icon,com.example.unlimitedApp.tools.stopwatch.MainActivity.class),
                             new Tool("qr",text,R.drawable.icon,com.example.unlimitedApp.tools.qrgenearator.MainActivity.class),
-                            new Tool("randomPassword",text,R.drawable.icon,com.example.unlimitedApp.tools.randomPassword.MainActivity.class)
+                            new Tool("randomPassword",text,R.drawable.icon,com.example.unlimitedApp.tools.randomPassword.MainActivity.class),
+                            new Tool("todo",text,R.drawable.icon,com.example.unlimitedApp.tools.todo.MainActivity.class)
                         }
                         ),
                 new Category("انترنت","هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.", R.drawable.background_design,
                         new Tool[]{
-                                new Tool("random Password",text,R.drawable.icon,com.example.unlimitedApp.tools.randomPassword.MainActivity.class)
+                                new Tool("random Password",text,R.drawable.icon,com.example.unlimitedApp.tools.randomPassword.MainActivity.class),
+                                new Tool("internet Speed",text,R.drawable.icon,com.example.unlimitedApp.tools.internetSpeed.MainActivity.class)
                         }),
                 new Category("تشفير","هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها.", R.drawable.background_design,
                         new Tool[]{

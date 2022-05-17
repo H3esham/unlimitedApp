@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/hhg"
     tools:context=".pages.auth.register.MainActivity">
 
     <LinearLayout
@@ -20,11 +21,12 @@
         <TextView
             android:id="@+id/maintitle"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:includeFontPadding="false"
+            android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="@string/pages_register_title"
-            android:textAlignment="center"
-            android:textSize="60sp" />
+            android:textColor="@color/white"
+            android:textSize="35dp"
+            android:textStyle="bold" />
 
         <Space
             android:layout_width="match_parent"
@@ -34,7 +36,16 @@
             android:id="@+id/fullName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#30ffffff"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:drawablePadding="20dp"
+            android:padding="20dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
             android:hint="@string/pages_register_full_name_hit"
             android:inputType="textPersonName" />
 
@@ -42,43 +53,73 @@
             android:id="@+id/age"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#30ffffff"
+            android:drawableStart="@drawable/ic_baseline_access_time_24"
+            android:drawablePadding="20dp"
             android:hint="@string/pages_register_age_hit"
-            android:inputType="number" />
+            android:inputType="number"
+            android:padding="20dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
 
         <EditText
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#30ffffff"
+            android:drawableStart="@android:drawable/ic_dialog_email"
+            android:drawablePadding="20dp"
             android:hint="@string/login_page_email_hint"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:padding="20dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
 
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#30ffffff"
+            android:drawableStart="@drawable/ic_baseline_vpn_key_24"
+            android:drawablePadding="20dp"
             android:hint="@string/login_page_password_hint"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:padding="20dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
         <EditText
             android:id="@+id/confirmPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#30ffffff"
+            android:drawableStart="@drawable/ic_baseline_vpn_key_24"
+            android:drawablePadding="20dp"
             android:hint="@string/login_page_confirmPassword_hint"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:padding="20dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="20dp" />
-
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone" />
 
         <Button
             android:id="@+id/register"
@@ -98,7 +139,8 @@
                 android:layout_marginTop="16dp"
                 android:layout_weight="1"
                 android:text="@string/login_page_button_login"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="#FFFFFF" />
 
             <TextView
                 android:id="@+id/without_login_btn"
@@ -107,7 +149,8 @@
                 android:layout_marginTop="16dp"
                 android:layout_weight="1"
                 android:text="home page without login"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColor="#FFFFFF" />
 
         </LinearLayout>
     </LinearLayout>
