@@ -156,4 +156,9 @@
     <string name="cancel">C</string>
     <string name="equal">=</string>
     <string name="percent">%</string>
+    <string name="tools_notepad_delete_all_title">delete all text</string>
+    <string name="tools_notepad_delete_all_message">are you sure you went delete all text</string>
+    <string name="tools_notepad_delete_all_positive">yes</string>
+    <string name="tools_notepad_delete_all_negative">no</string>
+    <string name="tools_notepad_title">notePad</string>
 </resources>
