@@ -45,7 +45,7 @@
             android:layout_margin="8dp"
             android:background="@color/black"
             android:padding="8dp"
-            android:textColor="@color/white"/>
+            android:textColor="@color/praise"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -65,7 +65,7 @@
 
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/praise"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -84,7 +84,7 @@
 
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:textColor="@color/black"
+            android:textColor="@color/praise"
             />
         <Button
             style="style"
@@ -93,7 +93,7 @@
 
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:background="@color/black"
+            android:background="@drawable/button_design"
             android:textColor="@color/black"
 
             android:text="Convert"

@@ -49,7 +49,7 @@
                     android:layout_weight="1"
                     android:textColor="@color/white"
                     android:layout_width="30pt"
-                    android:background="@color/purple_200"
+                    android:background="@color/praise"
                     ></Button>
                 <Button
                     android:id="@+id/btnEight"
@@ -60,7 +60,7 @@
                     android:layout_weight="1"
                     android:textColor="@color/white"
                     android:layout_width="30pt"
-                    android:background="@color/purple_200"
+                    android:background="@color/praise"
                     ></Button>
                 <Button
                     android:id="@+id/btnNine"
@@ -71,7 +71,7 @@
                     android:layout_weight="1"
                     android:textColor="@color/white"
                     android:layout_width="30pt"
-                    android:background="@color/purple_200"
+                    android:background="@color/praise"
                     ></Button>
                 <Button
                     android:id="@+id/btnDivide"
@@ -82,7 +82,7 @@
                     android:textColor="@color/white"
                     android:layout_weight="1"
                     android:layout_width="30pt"
-                    android:background="@color/purple_200"
+                    android:background="@color/praise"
                     ></Button>
             </TableRow>
 
@@ -106,7 +106,7 @@
                     android:layout_height="30pt"
                     android:layout_weight="1"
                     android:layout_width="30pt"
-                    android:background="@color/purple_200"
+                    android:background="@color/praise"
                     ></Button>
                 <Button
                     android:id="@+id/btnFive"
@@ -117,7 +117,7 @@
                     android:onClick="numberEvent"
                     android:layout_weight="1"
                     android:layout_width="30pt"
-                    android:background="@color/purple_200"
+                    android:background="@color/praise"
                     ></Button>
                 <Button
                     android:id="@+id/btnSix"
@@ -128,7 +128,7 @@
                     android:textColor="@color/white"
                     android:layout_weight="1"
                     android:layout_width="30pt"
-                    android:background="@color/purple_200"
+                    android:background="@color/praise"
                     ></Button>
                 <Button
                     android:id="@+id/btnMultiply"
@@ -139,7 +139,7 @@
                     android:textColor="@color/white"
                     android:layout_weight="1"
                     android:layout_width="30pt"
-                    android:background="@color/purple_200"
+                    android:background="@color/praise"
                     ></Button>
             </TableRow>
 
@@ -163,7 +163,7 @@
                     android:textColor="@color/white"
                     android:onClick="numberEvent"
                     android:layout_width="30pt"
-                    android:background="@color/purple_200"
+                    android:background="@color/praise"
                     ></Button>
                 <Button
                     android:id="@+id/btnTwo"
@@ -174,7 +174,7 @@
                     android:layout_weight="1"
                     android:onClick="numberEvent"
                     android:layout_width="30pt"
-                    android:background="@color/purple_200"
+                    android:background="@color/praise"
                     ></Button>
                 <Button
                     android:id="@+id/btnThree"
@@ -185,7 +185,7 @@
                     android:layout_width="30pt"
                     android:textColor="@color/white"
                     android:onClick="numberEvent"
-                    android:background="@color/purple_200"
+                    android:background="@color/praise"
                     ></Button>
                 <Button
                     android:id="@+id/btnMinus"
@@ -196,7 +196,7 @@
                     android:textColor="@color/white"
                     android:layout_weight="1"
                     android:layout_width="30pt"
-                    android:background="@color/purple_200"
+                    android:background="@color/praise"
                     ></Button>
             </TableRow>
 
@@ -219,7 +219,7 @@
                     android:layout_height="30pt"
                     android:layout_weight="1"
                     android:layout_width="30pt"
-                    android:background="@color/purple_200"
+                    android:background="@color/praise"
                     ></Button>
                 <Button
                     android:id="@+id/btnZero"
@@ -230,7 +230,7 @@
                     android:textColor="@color/white"
                     android:layout_width="30pt"
                     android:onClick="numberEvent"
-                    android:background="@color/purple_200"
+                    android:background="@color/praise"
                     ></Button>
                 <Button
                     android:id="@+id/btnDot"
@@ -241,7 +241,7 @@
                     android:layout_weight="1"
                     android:textColor="@color/white"
                     android:layout_width="30pt"
-                    android:background="@color/purple_200"
+                    android:background="@color/praise"
                     ></Button>
                 <Button
                     android:id="@+id/btnPlus"
@@ -252,7 +252,7 @@
                     android:textColor="@color/white"
                     android:onClick="operatorEvent"
                     android:layout_width="30pt"
-                    android:background="@color/purple_200"
+                    android:background="@color/praise"
                     ></Button>
             </TableRow>
 
@@ -275,7 +275,7 @@
                     android:layout_weight="1"
                     android:layout_width="30pt"
                     android:onClick="clearEvent"
-                    android:background="@color/purple_200"
+                    android:background="@color/praise"
                     ></Button>
 
                 <Button
@@ -287,7 +287,7 @@
                     android:onClick="equalEvent"
                     android:textColor="@color/white"
                     android:layout_width="30pt"
-                    android:background="@color/purple_200"
+                    android:background="@color/praise"
                     ></Button>
             </TableRow>
 
