@@ -137,7 +137,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="-"
-            android:textSize="50sp" />
+            android:textSize="28sp" />
 
         <Button
             android:id="@+id/resetBtn"
@@ -155,7 +155,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="+"
-            android:textSize="50sp" />
+            android:textSize="28sp" />
 
     </LinearLayout>
 

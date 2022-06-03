@@ -34,7 +34,7 @@
                 android:fontFamily="@font/sans_bold"
                 android:gravity="center_vertical|center_horizontal"
                 android:hint="@string/caesarCipher_enter_your_text"
-                android:textColor="@color/black"
+                android:textColor="@color/praise"
                 android:textSize="40sp" />
 
             <EditText
@@ -69,10 +69,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_margin="20dp"
-                android:background="@android:color/black"
+                android:background="@drawable/button_design"
                 android:fontFamily="@font/sans_bold"
                 android:text="@string/caesarCipher_encrypt"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                />
 
             <TextView
                 android:id="@+id/tV2"
@@ -89,7 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:layout_margin="20dp"
-                android:background="@android:color/black"
+                android:background="@drawable/button_design"
                 android:fontFamily="@font/sans_bold"
                 android:text="@string/caesarCipher_decrypt"
                 android:textColor="@android:color/white" />

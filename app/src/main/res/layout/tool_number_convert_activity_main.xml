@@ -34,7 +34,6 @@
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/icon"
                 android:contentDescription="app logo"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="16dp"/>
@@ -45,26 +44,30 @@
                 android:maxLength="10"
                 android:background="@drawable/foucsview_design"
                 android:drawableLeft="@drawable/decmial_left"
-                style="@style/myEditTextStyle" />
+                style="@style/myEditTextStyle"
+                android:textColor="@color/praise"/>
             <EditText
                 android:id="@+id/etvBinary"
                 style="@style/myEditTextStyle"
                 android:digits=""
                 android:background="@drawable/view_design"
-                android:drawableLeft="@drawable/binary_leftdrawable"/>
+                android:drawableLeft="@drawable/binary_leftdrawable"
+                android:textColor="@color/praise"/>
             <EditText
                 android:id="@+id/etvOctal"
                 style="@style/myEditTextStyle"
                 android:digits=""
                 android:background="@drawable/view_design"
                 android:drawableLeft="@drawable/oct_view"
+                android:textColor="@color/praise"
                 />
             <EditText
                 android:id="@+id/etvHexa"
                 style="@style/myEditTextStyle"
                 android:digits=""
                 android:background="@drawable/view_design"
-                android:drawableLeft="@drawable/hex_view"/>
+                android:drawableLeft="@drawable/hex_view"
+                android:textColor="@color/praise"/>
             <Button
                 android:id="@+id/btnClear"
                 android:text="Clear"

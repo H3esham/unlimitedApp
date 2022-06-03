@@ -52,7 +52,7 @@ public class MainActivity extends BaseActivity implements SensorEventListener {
         float degree = Math.round(event.values[0]);
         RotateAnimation animation = new RotateAnimation(current_degree, -degree, Animation.RELATIVE_TO_SELF, 0.5f,
                 Animation.RELATIVE_TO_SELF, 0.5f);
-        animation.setDuration(120);
+        animation.setDuration(136);
         animation.setFillAfter(true);
         compass.startAnimation(animation);
         current_degree = -degree;
